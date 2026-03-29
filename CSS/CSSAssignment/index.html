@@ -8,9 +8,9 @@
   </head>
   <body id="body">
     <div id="outerDiv">
-      <div id="innerDiv1">
-        <h3><b><u>Login</u></b></h3>
-        <div>
+      <div class="innerDiv1">
+        <h1 class="login"><span>Lo</span>gin</h1>
+        <div class="textDiv">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -23,10 +23,10 @@
               d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
             />
           </svg>
-          <input type="email" placeholder="Enter your email" />
+          <input type="email" placeholder="Enter your email" id="button" />
         </div>
 
-        <div>
+        <div class="textDiv">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -40,7 +40,7 @@
               d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"
             />
           </svg>
-          <input type="password" placeholder="Confirm a password" />
+          <input type="password" placeholder="Confirm a password" id="button" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -57,21 +57,28 @@
             />
           </svg>
         </div>
-        <div>
-          <input type="checkbox" />
-          <span>Remember me</span>
-          <span>Forgot password?</span>
+        <div class="textDiv" id="border">
+
+          <div class="textSpace">
+            <input type="checkbox" />
+            <span>Remember me</span>
+          </div>
+
+          <span class="link">Forgot password?</span>
         </div>
-        <div>
-          <button>Login Now</button>
+        
+        <div class="textDiv" id="border">
+          <button id="butt">Login Now</button>
         </div>
-        <div>Don't have an account? Signup now</div>
+        <div class="textDiv" id="border">
+          Don't have an account?<span class="link"> Signup now</span>
+        </div>
       </div>
 
-      <div id="innerDiv2">
-        <h3><b>Registration</b></h3>
+      <div class="innerDiv2">
+        <h1 class="login"><span>Re</span>gistration</h1>
 
-        <div>
+        <div class="textDiv">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -84,10 +91,10 @@
               d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
             />
           </svg>
-          <input type="text" placeholder="Enter your name" />
+          <input type="text" placeholder="Enter your name" id="button" />
         </div>
 
-        <div>
+        <div class="textDiv">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -100,9 +107,9 @@
               d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
             />
           </svg>
-          <input type="email" placeholder="Enter your email" />
+          <input type="email" placeholder="Enter your email" id="button" />
         </div>
-        <div>
+        <div class="textDiv">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -116,9 +123,9 @@
               d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"
             />
           </svg>
-          <input type="password" placeholder="Create a password" />
+          <input type="password" placeholder="Create a password" id="button" />
         </div>
-        <div>
+        <div class="textDiv">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -132,7 +139,7 @@
               d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"
             />
           </svg>
-          <input type="password" placeholder="Confirm a password" />
+          <input type="password" placeholder="Confirm a password" id="button" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -149,17 +156,17 @@
             />
           </svg>
         </div>
-        <div>
-            <input type="checkbox">
-            <span>I accept all terms & conditions</span>
+        <div class="textDiv" id="border">
+          <input type="checkbox" />
+          <span>I accept all terms & conditions</span>
         </div>
 
-        <div>
-            <button>Register Now</button>
+        <div class="textDiv" id="border">
+          <button id="butt">Register Now</button>
         </div>
 
-        <div>
-            Already have an account? Login now
+        <div class="textDiv" id="border">
+          Already have an account? <span class="link">Login now</span>
         </div>
       </div>
     </div>
