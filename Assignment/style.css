@@ -1,0 +1,66 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(222, 254, 244);
+    
+}
+
+h1{
+    background-color: rgb(186, 255, 255);
+    border: 2px solid yellow;
+    
+}
+
+
+.sn{
+    background-color: rgb(207, 255, 48);
+    font-size: large;
+}
+
+.hd{
+    background-color: aquamarine;
+}
+
+
+footer{
+    padding:100px 300px;
+}
+
+
+#footRow{
+    border: 2px solid black;
+}
+
+
+th{
+    background-color: aquamarine;
+}
+
+hr{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+button{
+    border-radius: 50px;
+    width: 70px;
+    height: 25px;
+    background-color: rgb(146, 238, 178);
+    box-shadow: 3px 2px 1px 2px rgb(0, 0, 0);
+    
+}
+
+button a{
+    background-color: rgb(146, 238, 178);
+}
+
+
+#task{
+    height: 50px;
+}
+
+#assign{
+    /* background-color: black; */
+}
+
+
+
+

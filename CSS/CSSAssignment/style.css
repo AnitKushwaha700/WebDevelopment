@@ -1,0 +1,37 @@
+* {
+  /* background-color: rgb(90, 90, 248); */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#body {
+  background-color: rgb(70, 70, 251);
+}
+
+#outerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#innerDiv1 {
+  width: 450px;
+  height: 550px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 40px 100px;
+
+
+}
+#innerDiv2 {
+  width: 480px;
+  height: 650px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 40px 100px;
+}
+
+
+h3{
+
+
+}

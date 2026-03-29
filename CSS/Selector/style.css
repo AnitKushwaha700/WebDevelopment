@@ -1,0 +1,27 @@
+*{
+
+    color: red;
+}
+
+
+th{
+    background-color: blueviolet;
+    color: rgb(0, 255, 132);   
+}
+
+td{
+    background-color: rgb(220, 145, 145);
+    color: blue;
+}
+
+#hei{
+    background-color: blanchedalmond;
+    color: black;
+    width: 100px;
+    height: 100px;
+}
+
+.cl{
+    height: 200px;
+    width: 200px;
+}

@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment Website</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <main>
       <div align="center">
-        <h1>Welcome to My Website</h1>
-
-        <hr width="70%" />
-
-        <h1>✨ ANIT KUSHWAHA ✨</h1>
-        <p>COURSE : MERN STACK DEVELOPMENT</p>
-        <hr width="80%" />
+        <div class="headingHeight">
+          <h1>Welcome to My Website</h1>
+        </div>
+        <div class="headingHeight">
+          <h1>✨ ANIT KUSHWAHA ✨</h1>
+        </div>
+        <div class="headingHeight">
+          <p>COURSE : MERN STACK DEVELOPMENT</p>
+        </div>
+        <hr/>
         <br />
 
         <p>
           Developed a multi-page website using pure HTML, demonstrating core
-          concepts such as text formatting, lists, tables, and forms. <br>
+          concepts such as text formatting, lists, tables, and forms. <br />
           Implemented structured folder organization and seamless navigation
           between pages, emphasizing clean code practices and semantic HTML.
         </p>
@@ -28,17 +32,17 @@
         <br />
 
         <center>
-          <fieldset style="width: 60%">
-            <legend align="center"><h2>My Assignments</h2></legend>
+          <fieldset id="field" style="width: 60%">
+            <legend align="center" id="assign"><h2>My Assignments</h2></legend>
             <table border="1" cellspacing="0" cellpadding="15" width="80%">
               <tr>
-                <th>S.NO</th>
-                <th>Types Of Assignment</th>
-                <th>Links</th>
+                <th class="hd">S.NO</th>
+                <th class="hd">Types Of Assignment</th>
+                <th class="hd">Links</th>
               </tr>
 
               <tr align="center">
-                <th>1.</th>
+                <td>1.</td>
                 <td>Text Formatting</td>
                 <td>
                   <a
@@ -49,7 +53,7 @@
               </tr>
 
               <tr align="center">
-                <th>2.</th>
+                <td>2.</td>
                 <td>Lists</td>
                 <td>
                   <a href="../Assignment/Assignment-2(List)/subIndex.html"
@@ -59,7 +63,7 @@
               </tr>
 
               <tr align="center">
-                <th>3.</th>
+                <td>3.</td>
                 <td>Tables</td>
                 <td>
                   <a href="../Assignment/Assignment-3(Table)/subIndex.html"
@@ -69,7 +73,7 @@
               </tr>
 
               <tr align="center">
-                <th>4.</th>
+                <td>4.</td>
                 <td>Forms</td>
                 <td>
                   <a href="../Assignment/Assignment-4(Forms)/subIndex.html"
@@ -84,65 +88,66 @@
       </div>
     </main>
 
-    <br /><br />
-    <hr />
+    <br /><br /><hr>
 
     <footer>
-      <center>
-        <table cellpadding="15">
-          <tr>
-            <td>
-              <img
-                src="./img2.jpeg"
-                alt="Profile Image"
-                width="180"
-                height="180"
-              />
-            </td>
-            <td></td>
+      <div id="footRow">
+        <center>
+          <table cellpadding="15" id="foot">
+            <tr>
+              <td>
+                <img
+                  src="./img2.jpeg"
+                  alt="Profile Image"
+                  width="180"
+                  height="180"
+                />
+              </td>
+              <td></td>
 
-            <td>
-              <h2>ANIT KUSHWAHA</h2>
+              <td>
+                <h2>ANIT KUSHWAHA</h2>
 
-              <p>
-                Contact :
-                <a href="tel:8989791426">+91 8989791426</a>
-              </p>
+                <p>
+                  Contact :
+                  <a href="tel:8989791426">+91 8989791426</a>
+                </p>
 
-              <p>
-                Gmail :
-                <a href="mailto:kushwahaanitak@gmail.com">
-                  kushwahaanitak@gmail.com
-                </a>
-              </p>
+                <p>
+                  Gmail :
+                  <a href="mailto:kushwahaanitak@gmail.com">
+                    kushwahaanitak@gmail.com
+                  </a>
+                </p>
 
-              <p>
-                Github :
-                <a href="https://github.com/Anikett700" target="_blank">
-                  GitHub Profile
-                </a>
-              </p>
+                <p>
+                  Github :
+                  <a href="https://github.com/Anikett700" target="_blank">
+                    GitHub Profile
+                  </a>
+                </p>
 
-              <p>
-                LinkedIn :
-                <a
-                  href="https://www.linkedin.com/in/l-anit-kushwaha-l-7651462bb"
-                  target="_blank"
-                >
-                  LinkedIn Profile
-                </a>
-              </p>
+                <p>
+                  LinkedIn :
+                  <a
+                    href="https://www.linkedin.com/in/l-anit-kushwaha-l-7651462bb"
+                    target="_blank"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </p>
 
-              <p>
-                WhatsApp :
-                <a href="https://wa.me/918989791426" target="_blank">
-                  Chat on WhatsApp
-                </a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </center>
+                <p>
+                  WhatsApp :
+                  <a href="https://wa.me/918989791426" target="_blank">
+                    Chat on WhatsApp
+                  </a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </center>
+      </div>
     </footer>
   </body>
 </html>
