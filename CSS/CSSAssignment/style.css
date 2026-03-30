@@ -52,7 +52,7 @@
   /* margin: 0 20px; */
   margin-left: 50px;
   margin-top: 20px;
-  }
+}
 
 .textDiv {
   display: flex;
@@ -68,7 +68,7 @@
   border: none;
 }
 
-#butt{
+#butt {
   height: 50px;
   width: 100vh;
   background-color: #476cfc;
@@ -78,45 +78,42 @@
   border: none;
 }
 
-input::placeholder{
+input::placeholder {
   color: gray;
-    font: 1.1rem sans-serif;
+  font-size: 17px;
 }
 
-input{
+input {
   height: 20px;
   padding: 10px;
 }
 
-#border{
+#border {
   border: none;
 }
 
-
-.link{
+.link {
   margin-left: 3px;
   color: blue;
 }
 
-.textSpace{
+.textSpace {
   display: flex;
-
 }
 
-svg{
+svg {
   color: gray;
   height: 45px;
   width: 22px;
 }
 
-.eyeMove{
+.eyeMove {
   color: grey;
   margin-bottom: -6px;
   margin-left: 110px;
 }
 
-
-#lastLine{
+#lastLine {
   color: gray;
   margin-left: 90px;
   margin-bottom: 30px;
@@ -127,13 +124,14 @@ input[type="checkbox"] {
   height: 20px;
 }
 
-#remember{ 
+#remember {
   color: gray;
   font-size: medium;
   margin-left: 10px;
 }
 
-#forgotPass{
+#forgotPass {
   font-size: medium;
   margin-left: 70px;
 }
+

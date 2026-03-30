@@ -1,4 +1,4 @@
-#outerDiv {
+/* #outerDiv {
   height: 300px;
   width: 600px;
   background-color: blue;
@@ -19,4 +19,37 @@
   border: 2px solid black;
   box-shadow: 5px 5px 10px 10px rgb(119, 117, 117);
   border-radius: 5px;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
 }
+
+
+bode{
+  display: flex;
+  justify-content: center;
+}
+
+#outerDiv{
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.innerDiv{
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
