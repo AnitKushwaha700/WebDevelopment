@@ -1,5 +1,117 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
+#outerDiv {
+  height: 100vh;
+  background-color: rgb(132, 167, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#heading {
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.innerDiv {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 20px;
+  height: 70%;
+  width: 30%;
+  display: grid;
+  text-align: start;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 8px 12px 1px 0 rgb(109, 144, 159);
+
+  /* opacity: 0;
+  transition: 0.5s;
+  transform: scale(1); */
+
+  animation: float 2s infinite alternate ease-in-out;
+}
+
+/* @keyframes move{
+  to{
+    opacity: 2;
+  }
+} */
+
+@keyframes float {
+  0% {
+    transform: scale(0.9);
+    /* transform: translate(-20px); */
+    /* transform: rotate(20deg); */
+  }
+  100% {
+    transform: scale(1);
+    /* transform: translate(20px); */
+    /* transform: rotate(-20deg); */
+  }
+}
+
+.item {
+  border: none;
+  height: 40px;
+  width: 90%;
+  border-bottom: 1px solid gray;
+
+  button {
+    font-size: large;
+    height: 40px;
+  }
+}
+
+.input {
+  padding-left: 10px;
+  height: 40px;
+  width: 80%;
+  border: none;
+  font-size: medium;
+}
+
+#item {
+  display: flex;
+  gap: 130px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+  padding: 15px 150px;
+  color: white;
+  background-color: rgb(33, 135, 237);
+}
+
+button:active {
+  /* transform: translate(5px, 2px); */
+  /* transform: scale(2); */
+  /* transform: skew(20deg); */
+}
+
+#check {
+  padding-right: 150px;
+}
+
+.rem {
+  text-align: start;
+}
+
+label {
+  color: rgb(108, 107, 107);
+}
+
+span {
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
