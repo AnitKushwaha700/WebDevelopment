@@ -1,0 +1,71 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+:root {
+  --main-color: red;
+  --sub-color: rgb(0, 34, 255);
+  --text-color: red;
+  --width: 200px;
+  /* --background-color: aqua; */
+
+
+}
+
+#outerDiv {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+#login {
+  height: 40px;
+  width: 100px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  color: var(--main-color);
+  width: var(--width);
+}
+
+#register {
+  height: 40px;
+  width: 100px;
+  background-color: var(--background-color);
+  border: 1px solid black;
+  border-radius: 5px;
+  color: var(--sub-color);
+  width: var(--width);
+}
+
+h1 {
+  color: var(--text-color);
+  width: var(--width);
+  background-color: var(--background-color);
+}
+
+p {
+  color: var(--sub-color);
+  background-color: var(--background-color);
+}
+
+th {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+td {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    width: max-content;
+    
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px 20px;
+}
