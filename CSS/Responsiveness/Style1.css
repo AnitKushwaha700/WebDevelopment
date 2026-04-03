@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+  .innerDiv {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media screen and (max-width: 1024px) {
+  .innerDiv {
+    background-color: aqua;
+  }
+}
+@media screen and (max-width: 800px) {
+  .innerDiv {
+    background-color: rgb(51, 255, 0);
+  }
+}
+@media screen and (max-width: 600px) {
+  .innerDiv {
+    background-color: rgb(212, 0, 255);
+  }
+}
+@media screen and (max-width: 400px) {
+  .innerDiv {
+    background-color: rgb(51, 255, 0);
+  }
+}
+@media screen and (max-width: 200px) {
+  .innerDiv {
+    background-color: rgb(255, 0, 0);
+  }
+}

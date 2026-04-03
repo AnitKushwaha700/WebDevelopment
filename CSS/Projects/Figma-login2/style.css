@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#outerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  /* background-color: aqua; */
+
+  #imgDiv {
+    /* box-shadow: 10px 10px 10px black; */
+  }
+
+  .formDiv {
+    display: grid;
+    /* justify-items: center; */
+    /* gap: 10px; */
+
+    .row {
+      display: flex;
+      gap: 5px;
+
+      .inputBox {
+        display: grid;
+        padding: 5px;
+
+        input {
+          padding: 5px;
+        }
+      }
+    }
+
+    
+
+    #password {
+      width: 350px;
+    }
+
+    .checkbox {
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+
+      span {
+        /* padding-left: 10px; */
+        color: red;
+      }
+      p{
+        padding: 10px 5px;
+      }
+    }
+  }
+
+  .checkbox input {
+    width: 20px;
+    height: 20px;
+    accent-color: #4f46e5;
+    cursor: pointer;
+  }
+
+  button {
+    border: 1px solid black;
+    /* margin: 10 px; */
+    
+    padding: 10px 130px;
+  }
+
+  p{
+    padding: 10px 0;
+    font-size: 15px;
+  }
+}
