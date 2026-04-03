@@ -8,69 +8,129 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px;
-  /* background-color: aqua; */
+  height: 100vh;
+  width: 100vw;
+  gap: 50px;
+  color: gray;
 
-  #imgDiv {
-    /* box-shadow: 10px 10px 10px black; */
+  h1 {
+    color: black;
   }
+}
 
-  .formDiv {
-    display: grid;
-    /* justify-items: center; */
-    /* gap: 10px; */
+.leftDiv {
+  width: 30%;
+  box-shadow: 10px 10px 10px 0 gray;
+  border-radius: 5px;
 
-    .row {
-      display: flex;
-      gap: 5px;
+  img {
+    width: 100%;
+  }
+}
 
-      .inputBox {
-        display: grid;
-        padding: 5px;
+.rightDiv {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 10px;
+  gap: 15px;
+  font-size: 15px;
 
-        input {
-          padding: 5px;
-        }
-      }
-    }
+  .row {
+    display: flex;
+    gap: 20px;
 
-    
+    .item1 {
+      display: grid;
 
-    #password {
-      width: 350px;
-    }
-
-    .checkbox {
-      padding-left: 10px;
-      display: flex;
-      align-items: center;
-
-      span {
-        /* padding-left: 10px; */
-        color: red;
-      }
-      p{
-        padding: 10px 5px;
+      input {
+        width: 90%;
+        height: 30px;
+        padding: 0 10px;
       }
     }
   }
 
-  .checkbox input {
-    width: 20px;
+  .row1 {
+    display: flex;
+
+    .item2 {
+      display: grid;
+      width: 100%;
+
+      input {
+        width: 87.5%;
+        padding: 8px 10px;
+      }
+    }
+  }
+}
+
+#remember {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  gap: 10px;
+
+  input {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+p {
+  text-align: center;
+  font-size: 13px;
+
+  span {
+    color: red;
+  }
+
+  a {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+#line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  hr {
+    width: 120px;
+  }
+}
+
+#para {
+  text-align: left;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+
+  img {
+    padding: 10px;
+    width: 80px;
     height: 20px;
-    accent-color: #4f46e5;
-    cursor: pointer;
+    border: 1px solid lightgreen;
   }
+}
+
+.bottomDiv {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  width: 100%;
+  justify-content: start;
 
   button {
-    border: 1px solid black;
-    /* margin: 10 px; */
-    
-    padding: 10px 130px;
-  }
-
-  p{
-    padding: 10px 0;
-    font-size: 15px;
+    padding: 12px 135px;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    font-size: 18px;
+    border: none;
   }
 }
