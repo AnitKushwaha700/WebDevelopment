@@ -51,39 +51,45 @@
   }
 }
 
-/* main {
-  width: 100vw;
-  height: 100vh;
-  color: rgb(85, 85, 85);
-} */
-
-form{
+form {
   display: grid;
-  width: 70%;
-  margin: 5% 15%;
-  justify-items: center;
-  background-color:aqua;
+  gap: 10px;
+  color: #485568;
   text-align: center;
-  gap: 20px;
+  border-radius: 15px;
+  margin: 5% 15%;
+  padding: 30px 10px;
+  width: 68%;
+  background-color: #eaf8fe;
 
-  h1{
-    padding:15px;
-    align-items: end;    
+  .heading{
+    display: grid;
+    gap:20px;
   }
 
   .form-item{
+    padding: 20px;
+    text-align: start;
     display: flex;
-    justify-content: space-between;
-    gap: 30%;
+    justify-content: center;
+    gap: 30px;
 
     .input{
       display: grid;
-      gap: 10px;
-
+      gap: 5px;
+      
       input{
-        padding: 10% 70%;
+        padding: 20px 130px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        text-align: start;
+
+        
+        
+
       }
     }
+
   }
-}
+
 
