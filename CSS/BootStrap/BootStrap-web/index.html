@@ -10,25 +10,200 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-        <div id="headerLeft">
-            <h1>Material Tailwind</h1>
-
-        </div>
-        <div id="headerBtn">
-            <button><img src="../StaticWebsite/Screenshot 2025-11-15 152036.png" alt=""></button>
-
-        </div>
-        <div id="headerRight">
-
-        </div>
+    <header
+      class="d-flex justify-content-between align-items-center p-4 gap-lg-5"
+    >
+      <div id="headerLeft">
+        <h3>Material Tailwind</h3>
+      </div>
+      <div id="headerBtn d-flex">
+        <button class="bg-white border-0">
+          <i class="bi bi-stack bg-black text-white rounded p-1"></i>
+          <label for="">Page</label>
+        </button>
+        <button class="bg-white border-0">
+          <i class="bi bi-person-circle text-white bg-black rounded p-1"></i>
+          <label for="">Account</label>
+        </button>
+        <button class="bg-white border-0">
+          <i class="bi bi-filetype-doc text-white bg-black rounded p-1"></i>
+          <label for="">DOCS</label>
+        </button>
+      </div>
+      <div id="headerRight" class="fs-5">
+        <span>Sign in</span>
+        <button class="border-0 bg-dark text-white rounded-2">Blocks</button>
+      </div>
     </header>
 
+    <main class="container">
+      <section
+        class="row d-flex justify-content-center align-items-center mt-lg-5"
+      >
+        <div id="left-part" class="col-6">
+          <h1>
+            Welcome to my Web <br />
+            Development Portofolio!
+          </h1>
+          <p class="text-black-50 fs-5">
+            I'm <span class="fw-bold text-black-50">Sakshat Anikett</span>, a
+            passionate web <br />
+            developer based in India. <br />
+            Here, you'll get a glimpse of my journey <br />
+            in the world of web development, <br />
+            where creativity meets functionality.
+          </p>
 
+          <label for="" class="h6 mt-4">Your Email</label>
+          <div class="d-flex align-items-center gap-5">
+            <div>
+              <input
+                type="email"
+                placeholder="Enter your Email "
+                class="form-control fs-5 text-black-50"
+              />
+            </div>
+            <button class="bg-black text-white rounded-2 p-2">
+              REQUIRE OFFER
+            </button>
+          </div>
+          <p>
+            Read my
+            <span class="text-decoration-underline"> Terms and Conditions</span>
+          </p>
+        </div>
 
+        <div class="col-6">
+          <img src="./img2.jpeg" alt="Anikett-img" class="w-100" />
+        </div>
+      </section>
 
+      
+      <div id="logo-section" class="col-12 pe-lg-5 border border-5">
+        <div>
+          <h3 class="text-center fs-4 mt-lg-5 fw-bold">My awesome clients</h3>
+        </div>
+        <div class="d-flex align-items-center w-25">
+          <img
+          src="../StaticWebsite/logo-coinbase.svg"
+          alt="#"
+          class="w-75"
+          />
+          <img src="../StaticWebsite/logo-spotify.svg" alt="#" class="w-75" />
+          <img
+          src="../StaticWebsite/logo-pinterest.svg"
+          alt="#"
+          class="w-75"
+          />
+          <img src="../StaticWebsite/logo-google.svg" alt="#" class="w-75" />
+          <img src="../StaticWebsite/logo-amazon.svg" alt="#" class="w-75" />
+          <img src="../StaticWebsite/logo-netflix.svg" alt="#" class="w-75" />
+        </div>
+      </div>
+      
+      <div class="row gap-lg-5 text-center border border-5">
+        <div class="col-12 d-grid gap-2">
+          <h4 class="fw-bold">My Skills</h4>
+          <h1 class="fw-bold">What i do</h1>
+          <p class="fs-5 text-black-50 mt-4">
+            I'm not just a developer; I'm a digital dreamweaver. Crafting
+            immersive online experiences is not just a job but my calling.
+            <br />
+            Discover below how I can help you.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <img
+              src="../StaticWebsite/Screenshot 2025-11-15 152036.png"
+              alt=""
+            />
+            <h5 class="fw-bold">Frontend Web Development</h5>
+            <p class="text-black-50">
+              Creating beautiful and functional web <br> experiences is my forte.
+              Using the latest <br> technologies and best practices, I design
+              <br>and build websites that captivate and <br> engage users.
+            </p>
+          </div>
+          <div class="col-4">
+            <img
+              src="../StaticWebsite/Screenshot 2025-11-15 152049.png"
+              alt=""
+            />
+            <h5 class="fw-bold">Mobile App Development</h5>
+
+            <p class="text-black-50">
+              I specialize in creating responsive and <br> intuitive mobile apps that
+              work seamlessly <br> across iOS & Android devices. From concept <br> to
+              deployment, I handle every stage of <br> the development process.
+            </p>
+          </div>
+          <div class="col-4">
+            <img
+              src="../StaticWebsite/Screenshot 2025-11-15 152058.png"
+              alt=""
+            />
+            <h5 class="fw-bold">Technology Stack</h5>
+
+            <p class="text-black-50">
+              I'm well-versed in the industry's most popular <br> frontend
+              technologies, including HTML5, <br> CSS3, JavaScript, and frameworks
+              like React <br> and React Native.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <img
+              src="../StaticWebsite/Screenshot 2025-11-15 152108.png"
+              alt=""
+            />
+            <h5 class="fw-bold">Web Optimization</h5>
+
+            <p class="text-black-50">
+              Performance matters. I optimize websites and <br> apps for speed,
+              ensuring your users enjoy a <br> fast and responsive experience, which
+              in turn <br> boosts user satisfaction and SEO rankings.
+            </p>
+          </div>
+          <div class="col-4">
+            <img
+              src="../StaticWebsite/Screenshot 2025-11-15 152115.png"
+              alt=""
+            />
+            <h5 class="fw-bold">User-Centric Design</h5>
+
+            <p class="text-black-50">
+              My development goes hand-in-hand with an <br> eye for design. I create
+              user interfaces that <br> are not only functional but also
+              aesthetically <br> pleasing, providing a seamless and enjoyable <br> user
+              journey.
+            </p>
+          </div>
+          <div class="col-4">
+            <img
+              src="../StaticWebsite/Screenshot 2025-11-15 152137.png"
+              alt=""
+            />
+            <h5 class="fw-bold">Testing and Quality Assurance</h5>
+
+            <p class="text-black-50">
+              I rigorously test and debug applications to <br> guarantee a bug-free
+              and secure environment <br> for users. Your peace of mind is as
+              important <br> to me as the functionality of your project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
