@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 70px;
+    background-color: #C2410C;
+
+    button{
+        width: 100px;
+        height: 35px;
+    }
+}
