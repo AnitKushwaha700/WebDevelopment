@@ -54,3 +54,32 @@ header button {
   background-color: var(--color-primary);
   color: var(--color-neutral-content);
 }
+
+.hero-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+
+#signup{
+  background-color: var(--color-primary);
+  color: white;
+}
+
+#carousel-input{
+  background-color: var(--color-base-200);
+  
+  input{
+    background-color: var(--color-base-200);
+  }
+}
+
+.restorent-card{
+  background-color: var(--color-base-100);
+}
+
+
