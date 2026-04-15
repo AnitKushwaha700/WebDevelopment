@@ -15,6 +15,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -59,7 +60,7 @@ header button {
   color: var(--color-neutral-content);
 }
 
-.hero-content{
+.hero-content {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,22 +69,126 @@ header button {
   z-index: 99;
 }
 
-
-#signup{
+#signup {
   background-color: var(--color-primary);
   color: white;
 }
 
-#carousel-input{
+#carousel-input,
+#carousel-input input,
+#order {
   background-color: var(--color-base-200);
-  
-  input{
-    background-color: var(--color-base-200);
+}
+
+#carousel-input input::placeholder {
+  color: #e09c7e;
+}
+
+#Restorent-section {
+  background: linear-gradient(
+    180deg,
+    rgb(211, 61, 1) 0%,
+    rgb(231, 196, 196) 50%,
+    rgb(255, 255, 255) 100%
+  );
+
+  p {
+    font-size: medium;
+  }
+
+  .card {
+    background-color: var(--color-base-100);
+  }
+
+  .small-btn {
+    background-color: var(--color-base-300);
+  }
+
+  hr {
+    color: var(--color-base-300);
+  }
+
+  .btn {
+    background-color: var(--color-primary);
+  }
+
+  button {
+    padding: 13px;
+  }
+
+  img {
+    height: 220px;
   }
 }
 
-.restorent-card{
-  background-color: var(--color-base-100);
+.card-animation {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
+.card-animation:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 
+#rating {
+  background-color: var(--color-base-100);
+
+  p {
+    font-size: 18px;
+  }
+
+  #rate1 {
+    color: var(--color-primary);
+  }
+  #rate2 {
+    color: #d9468f;
+  }
+}
+
+#circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.feedback {
+  background-color: var(--color-base-100);
+  p {
+    font-size: large;
+  }
+  .sneha {
+    background-color: #d9468f !important;
+  }
+}
+
+.last-section{
+  background-color: var(--color-primary);
+  a{
+    font-size: 20px;
+    background-color: var(--color-base-200);
+    color: var(--color-primary);
+  }
+}
+
+Footer{
+  background-color: #3f3f46; 
+}
+
+#Footer-Section a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  height: 1px;            
+  background-color: #fff;  
+  border: none;          
+  opacity: 1;     
+}
