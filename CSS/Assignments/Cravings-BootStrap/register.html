@@ -36,10 +36,10 @@
         <button
           class="bg-transparent border border-0 d-flex gap-2 align-items-center"
         >
-          <a href="#" id="loginBtn" class="text-decoration-none rounded-1"
+          <a href="./login.html" id="loginBtn" class="text-decoration-none rounded-1"
             >Login</a
           >
-          <a href="#" id="registerbtn" class="text-decoration-none rounded-1"
+          <a href="./register.html" id="registerbtn" class="text-decoration-none rounded-1"
             >Register</a
           >
         </button>
@@ -48,82 +48,128 @@
 
     <!------------------------ MAIN ----------------------->
     <main>
-      <div
-        class="bg-img d-flex justify-content-end align-items-center vh-100"
-       >
-        <div
-          id="card-logReg"
-          class="bg-white px-5 py-3 shadow rounded-3"
-          style="max-width: 500px; width: 100%"
-         >
-          <h1 class="fw-bold text-center pt-4 mb-2 text-primary-custom">
-            Welcome Back
-          </h1>
+      <div class="bg-img d-flex justify-content-end align-items-center vh-100">
+        <div class="container d-flex justify-content-end">
+          <div
+            id="card-logReg"
+            class="bg-white px-5 py-3 shadow rounded-3"
+            style="max-width: 500px; width: 100%"
+          >
+            <h1 class="fw-bold text-center pt-4 mb-2 text-primary-custom">
+              Create Account
+            </h1>
 
-          <p class="text-center text-muted mb-4">
-            Login to your Cravings account
-          </p>
+            <p class="text-center text-muted mb-4">
+              Join us as a Customer, Restaurant, or Rider
+            </p>
 
-          <form>
-            <div class="mb-3">
-              <label class=" form-label fw-medium ">Email</label>
-              <input
-                type="email"
-                class="form-control login-input shadow-none border-danger"
-                placeholder="Enter your email"
-              />
-            </div>
+            <form>
+              <div class="mb-4">
+                <label class="fw-semibold mb-2 d-block">Register as:</label>
 
-            <div class="mb-4">
-              <label class="form-label fw-medium">Password</label>
+                <div class="d-flex gap-4 align-items-center">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none"
+                      type="radio"
+                      name="role"
+                      id="customer"
+                      checked
+                    />
+                    <label class="form-check-label" for="customer"
+                      >Customer</label
+                    >
+                  </div>
 
-              <div class="position-relative">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none"
+                      type="radio"
+                      name="role"
+                      id="restaurant"
+                    />
+                    <label class="form-check-label" for="restaurant"
+                      >Restaurant</label
+                    >
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none"
+                      type="radio"
+                      name="role"
+                      id="rider"
+                    />
+                    <label class="form-check-label" for="rider">Rider</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control shadow-none"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control shadow-none"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control shadow-none"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div class="mb-3">
                 <input
                   type="password"
-                  class=" form-control pe-5 shadow-none border-danger"
+                  class="form-control shadow-none"
                   placeholder="Enter your password"
                 />
-                <i
-                  class="bi bi-eye position-absolute top-50 end-0 translate-middle-y me-3"
-                ></i>
               </div>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <div class="form-check">
-                <input class="form-check-input shadow-none " type="checkbox" id="check1" />
+              <div class="mb-4">
+                <input
+                  type="password"
+                  class="form-control shadow-none"
+                  placeholder="Confirm your password"
+                />
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="check1" />
                 <label class="form-check-label" for="check1">
-                  Remember me
+                  I agree to the
+                  <span class="text-danger">terms and conditions.</span>
                 </label>
               </div>
 
-              <a href="#" class="text-decoration-none text-primary-custom">
-                Forgot Password?
-              </a>
-            </div>
+              <button
+                class="w-100 py-2 rounded-3  btn-primary-custom border-0"
+              >
+                Register
+              </button>
 
-            <button class="w-100 mb-3 rounded-3 btn-primary-custom border border-0">
-              Login
-            </button>
-
-            <div class="d-flex align-items-center mb-3 text-muted small">
-              <hr class="flex-grow-1 border-1 border-top" />
-              <span class="mx-3">Don't have an account?</span>
-              <hr class="flex-grow-1 border-1 border-top" />
-            </div>
-
-            <div> 
-
-              <p class="text-center">
+              <p class="text-center mt-3 mb-0">
+                Already registered?
                 <a
                   href="#"
-                  class="text-decoration-none text-primary-custom fw-medium"
+                  class="text-decoration-none text-primary-custom fw-semibold"
                 >
-                  Create an account
+                  Login here
                 </a>
               </p>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
 
