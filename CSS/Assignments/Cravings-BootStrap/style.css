@@ -129,7 +129,15 @@ header button {
 
 .card-animation:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,0.4);
+}
+
+.Review-card{
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.Review-card:hover{
+      box-shadow: 0 8px 10px rgba(0,0,0,0.1);
 }
 
 #rating {
@@ -185,7 +193,6 @@ Footer {
 
 #Footer-Section {
   margin: 0 8%;
-
   a {
     text-decoration: underline;
   }
@@ -199,7 +206,7 @@ hr {
 }
 
 .bg-img {
-  background: url('./images/bgImage1-BgVBBcls.jpg') center/cover no-repeat;
+  background: url('./images/foodTable.webp') center/cover no-repeat;
 }
 
 .text-primary-custom {
@@ -207,14 +214,13 @@ hr {
 }
 
 .btn-primary-custom {
+  padding: 12px 0;
   background-color: var(--color-primary);
   color: white;
-}
-
-.btn-primary-custom:hover {
-  background-color: #a3360a;
+  font-size: 20px;
 }
 
 #card-logReg{
   margin-left: 100px;
 }
+
