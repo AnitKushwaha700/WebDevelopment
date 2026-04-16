@@ -198,10 +198,19 @@ hr {
   opacity: 1;
 }
 
-
 .bg-img {
-  background-image: url('./images/foodTable.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('./images/bgImage1-BgVBBcls.jpg') center/cover no-repeat;
+}
+
+.text-primary-custom {
+  color: var(--color-primary);
+}
+
+.btn-primary-custom {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary-custom:hover {
+  background-color: #a3360a;
 }
