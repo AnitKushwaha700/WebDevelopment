@@ -265,3 +265,11 @@ hr {
   color: var(--color-primary);
   font-size: 30px; 
 }
+
+.about-values{
+  background-color: var(--color-base-200);
+  P{
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+}
