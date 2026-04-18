@@ -24,7 +24,7 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
     <!--------------------------- HEADER ---------------------->
@@ -57,7 +57,7 @@
       <div
         class="bg-imgFeedback d-flex justify-content-end align-items-center vh-100"
       >
-        <div class="container d-flex justify-content-end">
+        <div class="container d-flex justify-content-end mt-5 pt-3">
           <div
             id="card-logReg"
             class="bg-white px-5 py-3 shadow rounded-3"
@@ -106,19 +106,25 @@
               </div>
 
               <div
-                class="d-flex justify-content-between align-items-center mb-4"
-                <h1>Overall Rating</h1>
+                class="d-flex justify-content-start align-items-center gap-4 mb-3"
+              >
+                <h5 class="mt-2">Overall Rating</h5>
                 <div>
-                     <i class="bi bi-star-fill text-white"></i> 
-                      <i class="bi bi-star-fill text-white"></i> 
-                       <i class="bi bi-star-fill text-white"></i> 
-                        <i class="bi bi-star-fill text-white"></i> 
-                         <i class="bi bi-star-fill text-white"></i>
+                  <i class="bi bi-star-fill text-secondary opacity-50 fs-4"></i>
+                  <i class="bi bi-star-fill text-secondary opacity-50 fs-4"></i>
+                  <i class="bi bi-star-fill text-secondary opacity-50 fs-4"></i>
+                  <i class="bi bi-star-fill text-secondary opacity-50 fs-4"></i>
+                  <i class="bi bi-star-fill text-secondary opacity-50 fs-4"></i>
                 </div>
               </div>
 
+              <div class="w-100 mb-4">
+                <label for="form-label" class="fw-medium mb-2">Your Feedback</label>
+                <input type="text" class="border border-1 border-danger form-control rounded-1 py-4" placeholder="Tell us your experience...">
+              </div>
+
               <button
-                class="w-100 mb-3 rounded-3 btn-primary-custom border border-0 "
+                class="w-100 mb-3 rounded-3 btn-primary-custom border border-0"
               >
                 Submit Feedback
               </button>
