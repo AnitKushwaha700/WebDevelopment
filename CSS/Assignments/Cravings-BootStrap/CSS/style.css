@@ -435,8 +435,8 @@ ul li::marker {
   justify-content: center;
   align-items: center;
 
-  placeholder {
-    background-color: var(--color-secondary) !important;
+  input, textarea,select {
+    background-color: rgb(178, 178, 178) !important;
   }
 }
 
