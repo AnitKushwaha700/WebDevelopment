@@ -352,7 +352,7 @@ hr {
 }
 
 /* ----privacy-police---- */
- .bg-full-Privacy {
+.bg-full-Privacy {
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/commonBG.avif");
@@ -361,32 +361,32 @@ hr {
   background-size: cover;
   height: 55vh;
 
-    #policy {
+  #policy {
     color: var(--color-primary);
   }
- }
-  .privacy-bg{
-    background-color: var(--color-base-100);
-  }
+}
+.privacy-bg {
+  background-color: var(--color-base-100);
+}
 .privacy-para {
-    font-size: 16px;
-    color: var(--color-neutral-content);
+  font-size: 16px;
+  color: var(--color-neutral-content);
 }
-li{
-    background-color: var(--color-primary-content);
-    font-size: 14px;
-    margin-bottom: 10px;
+li {
+  background-color: var(--color-primary-content);
+  font-size: 14px;
+  margin-bottom: 10px;
 }
-.faq-box{
-    width: 60%;
+.faq-box {
+  width: 60%;
 }
 ul li::marker {
   color: var(--color-primary);
 }
-.privacy-input-field{
-    border: 0.5px solid var(--color-base-300) !important;
+.privacy-input-field {
+  border: 0.5px solid var(--color-base-300) !important;
 }
-.Priavcy-email-section{
+.Priavcy-email-section {
   color: white;
   background-color: var(--color-primary);
 }
@@ -408,8 +408,8 @@ ul li::marker {
 }
 
 .accordion-button::after {
-  background-image: none; 
-  content: "\f282"; 
+  background-image: none;
+  content: "\f282";
   font-family: "bootstrap-icons";
   transform: rotate(0deg);
   transition: transform 0.3s ease;
@@ -418,7 +418,7 @@ ul li::marker {
   transform: rotate(180deg);
 }
 
-.terms-para-a{
+.terms-para-a {
   color: var(--color-primary);
 }
 .bg-imgHelp {
@@ -435,8 +435,8 @@ ul li::marker {
   justify-content: center;
   align-items: center;
 
-  placeholder{
-    background-color: var(--color-secondary)!important;
+  placeholder {
+    background-color: var(--color-secondary) !important;
   }
 }
 
@@ -449,20 +449,20 @@ ul li::marker {
   color: var(--color-primary);
 }
 
-.sitemap-para{
+.sitemap-para {
   color: var(--color-primary-content);
   /* opacity:200 !important; */
 }
 
-.sitemap-main{
+.sitemap-main {
   background-color: var(--color-base-100);
-  h5{
+  h5 {
     font-size: 15px;
-    font-weight:700;
+    font-weight: 700;
     color: var(--color-primary);
   }
 
-  i{
+  i {
     padding-right: 5px;
     opacity: 60%;
     font-size: 13px;
@@ -470,4 +470,8 @@ ul li::marker {
   }
 }
 
-
+.sitemap-animation:hover {
+  color: var(--color-primary) !important;
+  opacity: 100%;
+  
+}
