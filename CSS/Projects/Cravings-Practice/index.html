@@ -169,13 +169,13 @@
           <div class="d-flex justify-content-center gap-3 pt-2">
             <a
               href="register.html"
-              class="btn text-white px-4 py-2"
+              class="btn text-white px-4 py-2 border-0"
               style="background-color: var(--color-primary)"
               >Sign Up</a
             >
             <a
               href="order-now.html"
-              class="btn px-4 py-2"
+              class="btn px-4 py-2 text-black border-0"
               style="background-color: var(--color-base-100)"
               >Order Now</a
             >
@@ -609,14 +609,14 @@
       </section>
 
       <!-- ------------------------------ Rating-Section----------------------- -->
-      <section>
+      <section class="m-5">
         <div class="container text-center mb-5">
-          <h2 class="fw-bold">What Our Customers Say</h2>
-          <p>Real feedback from real food lovers</p>
+          <h2 class="fw-bold py-2">What Our Customers Say</h2>
+          <p class="pb-4">Real feedback from real food lovers</p>
           <div class="row justify-content-center d-flex gap-5">
             <div
               id="item1"
-              class="col-4 p-4 card border-0 h-25 w-25 text-start"
+              class="feedback-card col-4 p-4 card border-0 shadow-sm h-25 w-25 text-start"
               style="background-color: var(--color-base-100)"
             >
               <div class="d-flex gap-2 mb-3">
@@ -653,7 +653,7 @@
             </div>
             <div
               id="item2"
-              class="col-4 p-4 card border-0 h-25 w-25 text-start"
+              class="feedback-card col-4 p-4 card border-0 shadow-sm h-25 w-25 text-start"
               style="background-color: var(--color-base-100)"
             >
               <div class="d-flex gap-2 mb-3">
@@ -668,17 +668,29 @@
                 "Easy to use interface, wide variety of restaurants, and quick
                 delivery. I order from Cravings every week!"
               </p>
-              <div class="d-flex">
-                <h1>SP</h1>
-                <div class="d-grid">
-                  <h5>Sneha P.</h5>
-                  <p>Verified Buyer</p>
+              <div class="d-flex justify-content-start align-items-center">
+                <h1
+                  style="
+                    border-radius: 50px;
+                    background-color:  #d9468f;
+                    height: 50px;
+                    width: 50px;
+                    font-size: 23px;
+                    padding-top: 10px;
+                  "
+                  class="text-white text-center"
+                >
+                  SP
+                </h1>
+                <div class="ms-3">
+                  <h6 class="mb-0 fw-bold">Sneha P.</h6>
+                  <small class="text-muted">Verified Buyer</small>
                 </div>
               </div>
             </div>
             <div
               id="item3"
-              class="col-4 p-4 card border-0 h-25 w-25 text-start"
+              class="feedback-card col-4 p-4 card border-0 shadow-sm h-25 w-25 text-start"
               style="background-color: var(--color-base-100)"
             >
               <div class="d-flex gap-2 mb-3">
@@ -693,17 +705,41 @@
                 "Love the variety of restaurants available. Found my new
                 favorite spot through Cravings. Definitely worth it!"
               </p>
-              <div class="d-flex">
-                <h1>RK</h1>
-                <div class="d-grid">
-                  <h5>Raj Kumar</h5>
-                  <p>Verified Buyer</p>
+              <div class="d-flex justify-content-start align-items-center">
+                <h1
+                  style="
+                    border-radius: 50px;
+                    background-color: var(--color-primary);
+                    height: 50px;
+                    width: 50px;
+                    font-size: 23px;
+                    padding-top: 10px;
+                  "
+                  class="text-white text-center"
+                >
+                  RK
+                </h1>
+                <div class="ms-3">
+                  <h6 class="mb-0 fw-bold">Raj Kumar</h6>
+                  <small class="text-muted">Verified Buyer</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- -------------------------- last-btn-section--------------------->
+      <section style="background-color:var(--color-primary);">
+        <div class="d-grid justify-content-center text-white text-center p-5 gap-2">
+          <h1 class="fw-bold">Become a Restaurant Partner</h1>
+          <p class="opacity-75">Grow your business with Cravings. Join thousands of restaurants already delivering with us.</p>
+          <a href="partner-page">Partner With Us</a>
+        </div>
+
+      </section>
+
+
     </main>
 
     <!-- Bootstrap JS -->

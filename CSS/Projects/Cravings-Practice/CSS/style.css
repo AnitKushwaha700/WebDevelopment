@@ -69,3 +69,12 @@
   transform: scale(1.03);
   box-shadow: 0 5px 20px -5px rgba(0,0,0,0.4) !important;
 }
+
+.feedback-card{
+  transition: 
+  transform 0.2s ease,
+  box-shadow 0.2s ease;
+}
+.feedback-card:hover{
+  box-shadow: 0 8px 15px -10px rgba(0,0,0,0.4)!important;
+}
