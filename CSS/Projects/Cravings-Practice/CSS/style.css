@@ -40,3 +40,32 @@
   }
 }
 
+.bg-restaurant-section{
+  background: linear-gradient(
+    180deg,
+    rgb(211, 61, 1) 0%,
+    rgb(231, 196, 196) 50%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.restaurant-card-animation{
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.restaurant-card-animation:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px -15px rgba(0, 0, 0, 0.4) !important;
+}
+
+.rating-card{
+  transition: 
+  transform 0.2s ease,
+  box-shadow 0.2s ease;
+}
+.rating-card:hover{
+  transform: scale(1.03);
+  box-shadow: 0 5px 20px -5px rgba(0,0,0,0.4) !important;
+}
