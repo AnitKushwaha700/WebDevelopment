@@ -91,6 +91,8 @@
   position: absolute;
   top: 20%;
   left: 10%;
+  width: 400px;
+  height: auto;
 
   button{
     background-color: var(--color-primary);
@@ -101,7 +103,9 @@
   a{
     color: var(--color-primary);
   }
-
+  .login-placeholder{
+    font-size : 13px;
+  }
 }
 
 .login-input {
@@ -119,3 +123,27 @@
   color: var(--color-primary);
 }
 
+/* ------------Register--------- */
+
+#register-page{
+  position: absolute;
+  top: 12%;
+  right: 10%;
+  width: 400px;
+  height: auto;
+  width: 29%;
+
+  button{
+    background-color: var(--color-primary);
+  }
+  span{
+    font-size: 15px;
+    color: var(--color-primary);
+  }
+  a{
+    color: var(--color-primary);
+  }
+  .login-placeholder{
+    font-size : 13px;
+  }
+}
