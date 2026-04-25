@@ -79,6 +79,12 @@
   box-shadow: 0 8px 15px -10px rgba(0,0,0,0.4)!important;
 }
 
+/* -----------Footer----------- */
+footer a:hover{
+color: var(--color-primary)!important;
+}
+
+
 /* -----------login----------- */
 
 .login-img{
