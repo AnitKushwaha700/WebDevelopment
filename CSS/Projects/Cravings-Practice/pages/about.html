@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cravings-Static</title>
+    <title>contact</title>
 
     <!-- Bootstrap -->
     <link
@@ -27,7 +27,7 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
   </head>
   <body>
     <!-- --------------------------------- Header -------------------------- -->
@@ -38,19 +38,19 @@
         style="z-index: 999"
       >
         <div class="ps-4">
-          <a href="index.html">
+          <a href="../index.html">
             <img
-              src="./images/transparentLogoLight-De2Z7I01.png"
+              src="../images/transparentLogoLight-De2Z7I01.png"
               width="100px"
               alt=""
           /></a>
         </div>
         <div class="pe-5 d-flex gap-2">
-          <a href="pages/login.html" class="btn text-white loginbtn rounded-1"
+          <a href="login.html" class="btn text-white loginbtn rounded-1"
             >Login</a
           >
           <a
-            href="pages/register.html"
+            href="register.html"
             class="register-bg btn border border-1 rounded-1 loginbtn"
             >Register</a
           >
@@ -61,776 +61,99 @@
     <!-- ------------------------------------ Main -------------------------------- -->
 
     <main>
-      <div class="Hero-section position-relative">
+      <div class="position-relative text-center pt-5">
+        <img src="../images/aboutPage.png" class="about-bg w-100" alt="" />
+
         <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-interval="2000"
+          class="about-heading position-absolute start-50 translate-middle text-white text-center d-flex flex-column align-items-center"
         >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="./images/bgImage1-BgVBBcls.jpg"
-                class="d-block w-100"
-                style="
-                  height: 700px;
-                  object-fit: cover;
-                  filter: brightness(75%);
-                "
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./images/bgImage2-CSvQeVNX.jpg"
-                class="d-block w-100"
-                style="
-                  height: 700px;
-                  object-fit: cover;
-                  filter: brightness(75%);
-                "
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./images/bgImage3-BTY6Sz_K.jpg"
-                class="d-block w-100"
-                style="
-                  height: 700px;
-                  object-fit: cover;
-                  filter: brightness(75%);
-                "
-              />
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="./images/bgImage4-L1QELaMd.jpg"
-                class="d-block w-100"
-                style="
-                  height: 700px;
-                  object-fit: cover;
-                  filter: brightness(75%);
-                "
-              />
-            </div>
-          </div>
-
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon"></span>
-          </button>
+          <img
+            src="../images/circleLogo-DpCri5UD.png"
+            class="py-3"
+            width="90px"
+            alt=""
+          />
+          <h1 class="fw-bold display-5">About <span>Cravings</span></h1>
+          <p class="opacity-75">
+            Connecting hungry hearts with amazing food — one delivery at a time.
+          </p>
         </div>
 
-        <div
-          class="position-absolute top-50 start-50 translate-middle text-center text-white"
-          style="width: 60%"
-        >
-          <h1 class="fw-bold display-5">
-            Your Favorite Food, <br />
-            Delivered Fast
-          </h1>
-          <p class="fs-5">
-            Order from thousands of restaurants and get it delivered to your
-            doorstep
-          </p>
-          <div class="d-flex justify-content-center gap-3 pt-2">
-            <a
-              href="register.html"
-              class="btn text-white px-4 py-2 border-0"
-              style="background-color: var(--color-primary)"
-              >Sign Up</a
-            >
-            <a
-              href="order-now.html"
-              class="btn px-4 py-2 text-black border-0"
-              style="background-color: var(--color-base-100)"
-              >Order Now</a
-            >
-          </div>
-
-          <div
-            class="d-flex form-control align-items-center mt-4 rounded-3 hero-input"
-          >
-            <i class="bi bi-search text-muted me-2 ms-2"></i>
-
-            <input
-              type="text"
-              placeholder="Search restaurant and dishes.."
-              class="form-control border-0"
-            />
+        <div id="about-rating-section">
+          <div class="container">
+            <div class="row text-white p-4">
+              <div class="col-3">
+                <h4 class="fw-bold">50K+</h4>
+                <p>Happy Customers</p>
+              </div>
+              <div class="col-3">
+                <h4 class="fw-bold">1,200+</h4>
+                <p>Partner Restaurants</p>
+              </div>
+              <div class="col-3">
+                <h4 class="fw-bold">3,500+</h4>
+                <p>Active Riders</p>
+              </div>
+              <div class="col-3">
+                <h4 class="fw-bold">
+                  <i class="bi bi-star-fill text-warning"></i> 4.8
+                </h4>
+                <p>Happy Customers</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- ------------------------ Restaurant-Section ---------------------- -->
-
-      <section class="bg-restaurant-section">
-        <div class="container pt-5">
-          <h2 class="text-white fw-bold fs-3 ms-4">Featured Restaurants</h2>
-          <p class="text-white ms-4">6 restaurants available</p>
-
-          <div class="row gy-5">
-            <div
-              id="item1"
-              class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-content-center"
-            >
-              <div
-                class="card restaurant-card-animation h-100 shadow-sm border-0 rounded-4"
-                style="width: 370px; background-color: var(--color-base-100)"
-              >
-                <img
-                  src="./images/restaurant1.webp"
-                  class="card-img-top rounded-top-4"
-                  style="height: 200px; object-fit: cover; position: relative"
-                  alt="Restaurant"
-                />
-                <div
-                  class="star-rating text-white d-flex align-items-center gap-2 px-2 rounded-4"
-                  style="
-                    background-color: var(--color-primary);
-                    position: absolute;
-                    top: 10px;
-                    right: 20px;
-                  "
-                >
-                  <i class="bi bi-star-fill text-warning fs-6 text-white"></i
-                  >3.6
-                </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold pt-2">Under The Mango Tree</h5>
-
-                  <p class="card-text text-muted small">
-                    Enjoy the thrill of grill and barbecue at Under The Mango
-                    Tree restaurant at Jehan Numa Palace, Bhopal.
-                  </p>
-
-                  <div class="mb-2">
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      style="background-color: var(--color-base-300) !important"
-                      >Indian</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      style="background-color: var(--color-base-300) !important"
-                      >Chinese</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      style="background-color: var(--color-base-300) !important"
-                      >Italian</span
-                    >
-                  </div>
-
-                  <hr />
-
-                  <a href="restaurant-menu.html" class="btn btn-danger mt-auto">
-                    Explore Menu
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="item2"
-              class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-content-center"
-            >
-              <div
-                class="restaurant-card-animation card h-100 shadow-sm border-0 rounded-4"
-                style="width: 370px; background-color: var(--color-base-100)"
-              >
-                <img
-                  src="./images/restaurant2.webp"
-                  class="card-img-top rounded-top-4"
-                  style="height: 200px; object-fit: cover"
-                  alt="Restaurant"
-                />
-                <div
-                  class="star-rating text-white d-flex align-items-center gap-2 px-2 rounded-4"
-                  style="
-                    background-color: var(--color-primary);
-                    position: absolute;
-                    top: 10px;
-                    right: 20px;
-                  "
-                >
-                  <i class="bi bi-star-fill text-warning fs-6 text-white"></i
-                  >4.8
-                </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title pt-2 fw-bold">Raj Darbar</h5>
-
-                  <p class="card-text text-muted small">
-                    Raj Darbar is a one-of-a-kind Indian restaurant that offers
-                    a unique dining experience for families and friends with a
-                    dhaba-style theme.er The Mango Tree restaurant at Jehan Numa
-                    Palace, Bhopal.
-                  </p>
-
-                  <div class="mb-2">
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      style="background-color: var(--color-base-300) !important"
-                      >Indian</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      style="background-color: var(--color-base-300) !important"
-                      >Chinese</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      style="background-color: var(--color-base-300) !important"
-                      >Italian</span
-                    >
-                  </div>
-
-                  <hr />
-
-                  <a href="restaurant-menu.html" class="btn btn-danger mt-auto">
-                    Explore Menu
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="item3"
-              class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-content-center"
-            >
-              <div
-                class="restaurant-card-animation card h-100 shadow-sm border-0 rounded-4"
-                style="width: 370px; background-color: var(--color-base-100)"
-              >
-                <img
-                  src="./images/restaurant3.webp"
-                  class="card-img-top rounded-top-4"
-                  style="height: 200px; object-fit: cover"
-                  alt="Restaurant"
-                />
-                <div
-                  class="star-rating text-white d-flex align-items-center gap-2 px-2 rounded-4"
-                  style="
-                    background-color: var(--color-primary);
-                    position: absolute;
-                    top: 10px;
-                    right: 20px;
-                  "
-                >
-                  <i class="bi bi-star-fill text-warning fs-6 text-white"></i
-                  >4.6
-                </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Countryside Culture</h5>
-
-                  <p class="card-text text-muted small">
-                    A hidden gem away from the city, offering lush green meadows
-                    and peaceful walking paths for relaxation.
-                  </p>
-
-                  <div class="mb-2">
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Indian</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Chinese</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Italian</span
-                    >
-                  </div>
-
-                  <hr />
-
-                  <a href="restaurant-menu.html" class="btn btn-danger mt-auto">
-                    Explore Menu
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="item4"
-              class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-content-center"
-            >
-              <div
-                class="restaurant-card-animation card h-100 shadow-sm border-0 rounded-4"
-                style="width: 370px; background-color: var(--color-base-100)"
-              >
-                <img
-                  src="./images/restaurant1.webp"
-                  class="card-img-top rounded-top-4"
-                  style="height: 200px; object-fit: cover"
-                  alt="Restaurant"
-                />
-                <div
-                  class="star-rating text-white d-flex align-items-center gap-2 px-2 rounded-4"
-                  style="
-                    background-color: var(--color-primary);
-                    position: absolute;
-                    top: 10px;
-                    right: 20px;
-                  "
-                >
-                  <i class="bi bi-star-fill text-warning fs-6 text-white"></i
-                  >4.1
-                </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Under The Mango Tree</h5>
-
-                  <p class="card-text text-muted small">
-                    Enjoy the thrill of grill and barbecue at Under The Mango
-                    Tree restaurant at Jehan Numa Palace, Bhopal.
-                  </p>
-
-                  <div class="mb-2">
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Indian</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Chinese</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Italian</span
-                    >
-                  </div>
-
-                  <hr />
-
-                  <a href="restaurant-menu.html" class="btn btn-danger mt-auto">
-                    Explore Menu
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="item5"
-              class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-content-center"
-            >
-              <div
-                class="restaurant-card-animation card h-100 shadow-sm border-0 rounded-4"
-                style="width: 370px; background-color: var(--color-base-100)"
-              >
-                <img
-                  src="./images/restaurant2.webp"
-                  class="card-img-top rounded-top-4"
-                  style="height: 200px; object-fit: cover"
-                  alt="Restaurant"
-                />
-                <div
-                  class="star-rating text-white d-flex align-items-center gap-2 px-2 rounded-4"
-                  style="
-                    background-color: var(--color-primary);
-                    position: absolute;
-                    top: 10px;
-                    right: 20px;
-                  "
-                >
-                  <i class="bi bi-star-fill text-warning fs-6 text-white"></i
-                  >3.8
-                </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Raj Darbar</h5>
-
-                  <p class="card-text text-muted small">
-                    Raj Darbar is a one-of-a-kind Indian restaurant that offers
-                    a unique dining experience for families and friends with a
-                    dhaba-style theme.
-                  </p>
-
-                  <div class="mb-2">
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Indian</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Chinese</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Italian</span
-                    >
-                  </div>
-
-                  <hr />
-
-                  <a href="restaurant-menu.html" class="btn btn-danger mt-auto">
-                    Explore Menu
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="item6"
-              class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-content-center"
-            >
-              <div
-                class="restaurant-card-animation card h-100 shadow-sm border-0 rounded-4"
-                style="width: 370px; background-color: var(--color-base-100)"
-              >
-                <img
-                  src="./images/restaurant3.webp"
-                  class="card-img-top rounded-top-4"
-                  style="height: 200px; object-fit: cover"
-                  alt="Restaurant"
-                />
-                <div
-                  class="star-rating text-white d-flex align-items-center gap-2 px-2 rounded-4"
-                  style="
-                    background-color: var(--color-primary);
-                    position: absolute;
-                    top: 10px;
-                    right: 20px;
-                  "
-                >
-                  <i class="bi bi-star-fill text-warning fs-6 text-white"></i
-                  >4.6
-                </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Countryside Culture</h5>
-
-                  <p class="card-text text-muted small">
-                    A hidden gem away from the city, offering lush green meadows
-                    and peaceful walking paths for relaxation.
-                  </p>
-
-                  <div class="mb-2">
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Indian</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Chinese</span
-                    >
-                    <span
-                      class="badge bg-light text-dark"
-                      style="background-color: var(--color-base-300) !important"
-                      >Italian</span
-                    >
-                  </div>
-
-                  <hr />
-
-                  <a href="restaurant-menu.html" class="btn btn-danger mt-auto">
-                    Explore Menu
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ------------------------------ Millions 4-card Section ------------------------- -->
-
-      <section
-        class="millions-card-section mt-5 pb-5"
-        style="background-color: var(--color-base-100)"
-      >
-        <div class="text-center container">
-          <h2 class="fw-bold pt-5">Cravings by the Numbers</h2>
-          <p>See why millions trust us for their daily food delivery needs</p>
-
-          <div class="row gx-4 gy-4 mt-4 justify-content-center">
-            <div
-              id="item1"
-              class="col-12 col-md-4 col-lg-3"
-              style="width: 280px; height: 230px"
-            >
-              <div
-                class="rating-card card border-0 h-100 shadow pt-4"
-                style="background-color: var(--color-primary-content)"
-              >
-                <h1
-                  class="fw-bold display-5"
-                  style="color: var(--color-primary)"
-                >
-                  2.5M +
-                </h1>
-                <p class="fw-bold pt-3">Successful Deliveries</p>
-                <p>
-                  Orders delivered with <br />
-                  care and precision
-                </p>
-              </div>
-            </div>
-
-            <div
-              id="item2"
-              class="col-12 col-md-4 col-lg-3"
-              style="width: 280px; height: 230px"
-            >
-              <div
-                class="rating-card card border-0 py-4 h-100 shadow"
-                style="background-color: var(--color-primary-content)"
-              >
-                <h1 class="fw-bold display-5" style="color: #d9468f">500K+</h1>
-                <p class="fw-bold pt-3">Happy Customers</p>
-                <p>
-                  Satisfied users enjoying <br />
-                  delicious food
-                </p>
-              </div>
-            </div>
-
-            <div
-              id="item3"
-              class="col-12 col-md-4 col-lg-3"
-              style="width: 280px; height: 230px"
-            >
-              <div
-                class="rating-card card border-0 py-4 h-100 shadow"
-                style="background-color: var(--color-primary-content)"
-              >
-                <h1
-                  class="fw-bold display-5"
-                  style="color: var(--color-primary)"
-                >
-                  5K+
-                </h1>
-                <p class="fw-bold pt-3">Partner Restaurants</p>
-                <p>
-                  Restaurants serving <br />
-                  amazing cuisine
-                </p>
-              </div>
-            </div>
-
-            <div
-              id="item4"
-              class="col-12 col-md-4 col-lg-3"
-              style="width: 280px; height: 230px"
-            >
-              <div
-                class="rating-card card border-0 py-4 h-100 shadow"
-                style="background-color: var(--color-primary-content)"
-              >
-                <h1 class="fw-bold display-5" style="color: #d9468f">1K+</h1>
-                <p class="fw-bold pt-3">Active Delivery Partners</p>
-                <p>
-                  Riders ensuring quick <br />
-                  and safe delivery
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ------------------------------ Rating-Section----------------------- -->
-      <section class="m-5">
-        <div class="container text-center mb-5">
-          <h2 class="fw-bold py-2">What Our Customers Say</h2>
-          <p class="pb-4">Real feedback from real food lovers</p>
-          <div class="row justify-content-center d-flex gap-5">
-            <div
-              id="item1"
-              class="feedback-card col-4 p-4 card border-0 shadow-sm h-25 w-25 text-start"
-              style="background-color: var(--color-base-100)"
-            >
-              <div class="d-flex gap-2 mb-3">
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-              </div>
-              <h3 class="fs-5 pb-2 fw-bold">Amazing Service!</h3>
-              <p style="font-size: 15px">
-                "The food arrived hot and fresh. The delivery was incredibly
-                fast. Highly impressed with Cravings' service!"
+      <div class="about-card">
+        <div class="container">
+          <div class="row align-items-center p-5 mx-5">
+            <div class="col-6">
+              <p id="card-heading">Our Story</p>
+              <h2 class="fw-bold">Born from a love of great food</h2>
+              <p>
+                Cravings started in 2022 when three food lovers realized that
+                finding and ordering from local restaurants was harder than it
+                needed to be. We set out to build a platform that puts
+                restaurants, riders, and customers first — all in one seamless
+                experience. <br />
+                <br />
+                Today, we operate across dozens of cities, empowering small
+                businesses to reach new customers and enabling riders to build a
+                flexible livelihood — all while bringing delicious meals
+                straight to your door.
               </p>
-              <div class="d-flex justify-content-start align-items-center">
-                <h1
-                  style="
-                    border-radius: 50px;
-                    background-color: var(--color-primary);
-                    height: 50px;
-                    width: 50px;
-                    font-size: 23px;
-                    padding-top: 10px;
-                  "
-                  class="text-white text-center"
-                >
-                  AJ
-                </h1>
-                <div class="ms-3">
-                  <h6 class="mb-0 fw-bold">Arun J.</h6>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
             </div>
-            <div
-              id="item2"
-              class="feedback-card col-4 p-4 card border-0 shadow-sm h-25 w-25 text-start"
-              style="background-color: var(--color-base-100)"
-            >
-              <div class="d-flex gap-2 mb-3">
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-              </div>
-              <h3 class="fs-5 pb-2">Best App Ever!</h3>
-              <p style="font-size: 15px">
-                "Easy to use interface, wide variety of restaurants, and quick
-                delivery. I order from Cravings every week!"
-              </p>
-              <div class="d-flex justify-content-start align-items-center">
-                <h1
-                  style="
-                    border-radius: 50px;
-                    background-color: #d9468f;
-                    height: 50px;
-                    width: 50px;
-                    font-size: 23px;
-                    padding-top: 10px;
-                  "
-                  class="text-white text-center"
-                >
-                  SP
-                </h1>
-                <div class="ms-3">
-                  <h6 class="mb-0 fw-bold">Sneha P.</h6>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-            </div>
-            <div
-              id="item3"
-              class="feedback-card col-4 p-4 card border-0 shadow-sm h-25 w-25 text-start"
-              style="background-color: var(--color-base-100)"
-            >
-              <div class="d-flex gap-2 mb-3">
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-                <i class="bi bi-star-fill text-warning fs-5"></i>
-              </div>
-              <h3 class="fs-5 pb-2">Excellent Choices</h3>
-              <p style="font-size: 15px">
-                "Love the variety of restaurants available. Found my new
-                favorite spot through Cravings. Definitely worth it!"
-              </p>
-              <div class="d-flex justify-content-start align-items-center">
-                <h1
-                  style="
-                    border-radius: 50px;
-                    background-color: var(--color-primary);
-                    height: 50px;
-                    width: 50px;
-                    font-size: 23px;
-                    padding-top: 10px;
-                  "
-                  class="text-white text-center"
-                >
-                  RK
-                </h1>
-                <div class="ms-3">
-                  <h6 class="mb-0 fw-bold">Raj Kumar</h6>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <div class="col-6">
+              <div class="row">
+                <div class="col-6 bg-white">
+                  <i class="fa-solid fa-utensils fs-4 mb-3"></i>
 
-      <!-- -------------------------- last-btn-section--------------------->
-      <section style="background-color: var(--color-primary)">
-        <div
-          class="d-grid justify-content-center text-white text-center p-5 gap-2"
-        >
-          <h1 class="fw-bold">Become a Restaurant Partner</h1>
-          <p class="opacity-75">
-            Grow your business with Cravings. Join thousands of restaurants
-            already delivering with us.
-          </p>
-          <div>
-            <a
-              href="partner-page"
-              class="btn btn-group py-2 mt-3 w-25 justify-content-center"
-              style="
-                background-color: var(--color-base-100);
-                color: var(--color-primary);
-              "
-              >Partner With Us</a
-            >
+                  <b>Restaurants</b>
+                  <p>Diverse cuisines from local gems</p>
+                </div>
+                <div class="col-6 bg-white" >
+                  <i class="fa-solid fa-bicycle fs-4 mb-3"></i>
+
+                  <b>Riders</b>
+                  <p>Fast, reliable delivery partners</p>
+                </div">
+                  <i class="fa-solid fa-store fs-4 mb-3"></i>
+
+                  <b>Partners</b>
+                  <p>Businesses that grow with us</p>
+                </div>
+                <div class="col-6 bg-white">
+                  <i class="fa-solid fa-store fs-4 mb-3"></i>
+
+                  <b>Community </b>
+                  <p>People at the heart of everything</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- -------------------------------- Footer -------------------------------- -->
@@ -842,11 +165,11 @@
           restaurants and riders. ---
         </p>
         <div class="row gx-5 gy-3">
-          <div class="col-12 col-md-3 mb-2 text-start text-md-center">
-            <img src="images/circleLogo-DpCri5UD.png" width="120px" alt="" />
+          <div class="col-3">
+            <img src="../images/circleLogo-DpCri5UD.png" width="120px" alt="" />
           </div>
 
-          <div class="col-12 col-md-2 mb-2 text-start d-grid gap-1">
+          <div class="col-2 d-grid text-start">
             <p>Quick Links</p>
             <a
               href="index.html"
@@ -868,7 +191,7 @@
             >
           </div>
 
-          <div class="col-12 col-md-2 mb-2 d-grid gap-1 text-start">
+          <div class="col-2 text-start">
             <p>For Restaurants</p>
             <a
               href="pages/partner.html"
@@ -884,7 +207,7 @@
             >
           </div>
 
-          <div class="col-12 col-md-2 mb-2 d-grid gap-1 text-start">
+          <div class="col-2 text-start">
             <p>For Riders</p>
             <a
               href="pages/register.html"
@@ -900,7 +223,7 @@
             >
           </div>
 
-          <div class="col-12 col-md-3 mb-2 d-grid gap-1 text-start">
+          <div class="col-3 d-grid text-start">
             <p>Feedback & Restaurant</p>
             <a
               href="pages/feedback.html"

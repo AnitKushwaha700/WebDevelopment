@@ -153,3 +153,31 @@ color: var(--color-primary)!important;
     font-size : 13px;
   }
 }
+
+/* ------about--------- */
+.about-bg{
+  filter: brightness(50%);
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  object-fit: cover;
+}
+.about-heading{
+  top: 40%;
+  span{
+    color: var(--color-primary);
+  }
+}
+#about-rating-section{
+  background-color: var(--color-neutral);
+  h4{
+    color: var(--color-primary);
+  }
+}
+.about-card{
+  background-color: var(--color-base-100);
+  i, #card-heading{
+    color: var(--color-primary);
+  }
+}
+
