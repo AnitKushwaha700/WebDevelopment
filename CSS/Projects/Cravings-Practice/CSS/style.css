@@ -193,6 +193,12 @@ footer a:hover {
     opacity: 80%;
   }
 }
+.feed-icon {
+  color: rgb(197, 197, 197) !important;
+}
+.feed-icon:hover {
+  color: gold !important;
+}
 
 i,
 .values-heading {
@@ -240,5 +246,27 @@ i,
   .form-control::placeholder {
     color: var(--color-primary);
     opacity: 50%;
+  }
+}
+
+/* ----help-page--------- */
+#help-main {
+  position: relative;
+
+  .help-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    height: 100vh;
+    width: 99vw;
+  }
+  .help-heading,.questionmark-icon{
+    color: var(--color-primary)!important;
+  }
+  i{
+    color: white!important;
+    padding-right: 10px;
   }
 }

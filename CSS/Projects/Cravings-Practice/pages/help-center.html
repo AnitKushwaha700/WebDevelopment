@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <!-- --------------------------------- Header -------------------------- -->
+
+    <header>
+      <div
+        class="Nav-bg d-flex justify-content-between align-items-center container-fluid fixed-top"
+        style="z-index: 999"
+      >
+        <div class="ps-4">
+          <a href="../index.html">
+            <img
+              src="../images/transparentLogoLight-De2Z7I01.png"
+              width="100px"
+              alt=""
+          /></a>
+        </div>
+        <div class="pe-5 d-flex gap-2">
+          <a href="login.html" class="btn text-white loginbtn rounded-1"
+            >Login</a
+          >
+          <a
+            href="register.html"
+            class="register-bg btn border border-1 rounded-1 loginbtn"
+            >Register</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- ------------------------------------ Main -------------------------------- -->
+
+    <main id="help-main">
+        <img src="../images/HelpPage.png" class="help-bg-img" alt="">
+      <div class="container py-4">
+        <div class="row d-flex justify-content-center">
+          <div
+            class="col-lg-8 col-md-10 bg-black rounded-4 bg-opacity-75 px-3 py-4"
+          >
+            <!-- Header -->
+            <div
+              class="text-center align-items-center d-grid justify-content-center mb-2"
+            >
+              <div
+                class="help-heading d-flex justify-content-center align-items-center"
+              >
+                <i
+                  class="bi bi-question-circle-fill px-3 fs-2 questionmark-icon"
+                ></i>
+                <h1 class="fw-bold mb-2">Help Center</h1>
+              </div>
+              <p class="text-white">
+                Browse FAQs or submit a support ticket below.
+              </p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-6 text-white border-end">
+                <div class="border-0 rounded-1 p-4 h-100 shadow-sm">
+                  <h2 class="h6 fw-bold mb-3">FREQUENTLY ASKED QUESTIONS</h2>
+
+                  <div class="pt-2 d-grid gap-2">
+                    <div class="accordion" id="privacyAccordion">
+                      <div class="rounded-1 overflow-hidden border">
+                        <h2
+                          class="accordion-header d-flex justify-content-between align-items-center px-2"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                        >
+                          <button
+                            class="border-0 btn text-white fw-semibold fs-6 bg-transparent shadow-none d-flex align-items-center"
+                          >
+                            <div>
+                              <i class="fa-solid fa-store fs-6"></i>
+                              <span class="fs-6">How do I track my order?</span>
+                            </div>
+                          </button>
+                          <span class="text-white fw-bold h5">+</span>
+                        </h2>
+                        <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#privacyAccordion"
+                        >
+                          <div class="accordion-body bg-secondary text-white">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Facere voluptates sequi
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="d-flex w-100 justify-content-between align-items-center"
+                    >
+                      <div class="w-100">
+                        <div class="accordion" id="privacyAccordion">
+                          <div class="rounded-1 overflow-hidden border">
+                            <h2
+                              class="accordion-header d-flex justify-content-between align-items-center px-2"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo"
+                            >
+                              <button
+                                class="border-0 btn text-white fw-semibold fs-6 bg-transparent shadow-none d-flex align-items-center w-100"
+                              >
+                                <div>
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                  <span class="fs-6"
+                                    >How do I get a refund?</span
+                                  >
+                                </div>
+                              </button>
+                              <span class="text-white fw-bold h5">+</span>
+                            </h2>
+                            <div
+                              id="collapseTwo"
+                              class="accordion-collapse collapse"
+                              data-bs-parent="#privacyAccordion"
+                            >
+                              <div
+                                class="accordion-body bg-secondary text-white"
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Facere voluptates sequi
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="w-100">
+                        <div class="accordion" id="privacyAccordion">
+                          <div class="rounded-1 overflow-hidden border">
+                            <h2
+                              class="accordion-header d-flex justify-content-between align-items-center px-2"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseThree"
+                            >
+                              <button
+                                class="border-0 btn text-white fw-semibold fs-6 bg-transparent shadow-none d-flex align-items-center w-100"
+                              >
+                                <div>
+                                  <i class="fa-solid fa-motorcycle"></i>
+                                  <span class="fs-6"
+                                    >My rider is late. What do I do?</span
+                                  >
+                                </div>
+                              </button>
+                              <span class="text-white fw-bold h5">+</span>
+                            </h2>
+                            <div
+                              id="collapseThree"
+                              class="accordion-collapse collapse"
+                              data-bs-parent="#privacyAccordion"
+                            >
+                              <div
+                                class="accordion-body bg-secondary text-white"
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Facere voluptates sequi
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="w-100">
+                        <div class="accordion" id="privacyAccordion">
+                          <div class="rounded-1 overflow-hidden border">
+                            <h2
+                              class="accordion-header d-flex justify-content-between align-items-center px-2"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseFour"
+                            >
+                              <button
+                                class="border-0 btn text-white fw-semibold fs-6 bg-transparent shadow-none d-flex align-items-center w-100"
+                              >
+                                <div>
+                                  <i class="fa-solid fa-user"></i>
+                                  <span class="fs-6"
+                                    >How do I update my account info?</span
+                                  >
+                                </div>
+                              </button>
+                              <span class="text-white fw-bold h5">+</span>
+                            </h2>
+                            <div
+                              id="collapseFour"
+                              class="accordion-collapse collapse"
+                              data-bs-parent="#privacyAccordion"
+                            >
+                              <div
+                                class="accordion-body bg-secondary text-white"
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Facere voluptates sequi
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div
+                  class="border-0 rounded-3 text-white p-4 bg-transparent h-100 shadow-sm"
+                >
+                  <h2 class="h6 fw-bold mb-3">SUBMIT A SUPPORT TICKET</h2>
+
+                  <div class="mb-3">
+                    <div class="position-relative input">
+                      <input
+                        type="text"
+                        class="form-control help-center-input form-control-sm"
+                        placeholder="Enter your full name"
+                        style="height: 38px"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="position-relative">
+                      <input
+                        type="email"
+                        class="form-control help-center-input form-control-sm bg-light"
+                        placeholder="Enter your email"
+                        style="height: 38px"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="position-relative">
+                      <select
+                        class="form-select help-center-input form-control form-select-sm bg-light"
+                        style="height: 38px"
+                      >
+                        <option selected disabled>Select issue type</option>
+                        <option>Account & Profile</option>
+                        <option>Order Issues</option>
+                        <option>Payment & Billing</option>
+                        <option>Delivery Problem</option>
+                        <option>Restaurant / Menu</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="position-relative">
+                      <input
+                        type="text"
+                        class="form-control help-center-input form-control-sm bg-light"
+                        placeholder="e.g. ORD-00123"
+                        style="height: 38px"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <textarea
+                      class="form-control bg-light help-center-input"
+                      rows="3"
+                      placeholder="Please describe the problem in detail..."
+                    ></textarea>
+                  </div>
+
+                  <div class="mt-4">
+                    <button
+                      class="help-btn-submit w-100 px-3 py-2 border-0 rounded-2 fs-5 btn-help-center"
+                    >
+                      Submit Ticket
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- -------------------------------- Footer -------------------------------- -->
+
+    <footer style="background-color: var(--color-neutral)">
+      <div class="text-center container text-white pt-5 pb-4">
+        <p class="small opacity-75 pb-4">
+          --- Your favorite food delivery platform connecting customers with
+          restaurants and riders. ---
+        </p>
+        <div class="row gx-5 gy-3">
+          <div class="col-3">
+            <img src="../images/circleLogo-DpCri5UD.png" width="120px" alt="" />
+          </div>
+
+          <div class="col-2 d-grid text-start">
+            <p>Quick Links</p>
+            <a
+              href="../index.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >About</a
+            >
+            <a
+              href="order-now.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Order-Now</a
+            >
+          </div>
+
+          <div class="col-2 text-start">
+            <p>For Restaurants</p>
+            <a
+              href="partner.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Partner With Us</a
+            >
+            <a
+              href="restaurant-menu.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Restaurant Dashboard</a
+            >
+          </div>
+
+          <div class="col-2 text-start">
+            <p>For Riders</p>
+            <a
+              href="register.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Become a Rider</a
+            >
+            <a
+              href="register.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Rider Dashboard</a
+            >
+          </div>
+
+          <div class="col-3 d-grid text-start">
+            <p>Feedback & Restaurant</p>
+            <a
+              href="feedback.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Submit Feedback</a
+            >
+            <a
+              href="help-center.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Help Center</a
+            >
+            <a
+              href="contact.html"
+              class="text-decoration-none text-white"
+              style="font-size: 14px"
+              >Contact Us</a
+            >
+          </div>
+
+          <div class="justify-content-center container" style="width: 90%">
+            <hr class="opacity-100 mt-5" />
+
+            <div class="d-flex justify-content-between pt-3">
+              <div>
+                <p style="font-size: 14px">
+                  © 2026 Cravings. All rights reserved.
+                </p>
+              </div>
+              <div class="d-flex gap-4">
+                <a
+                  href="privacy-policy.html"
+                  class="text-decoration-none text-white"
+                  style="font-size: 14px"
+                  >privacy Policy</a
+                >
+                <a
+                  href="terms-of-service.html"
+                  class="text-decoration-none text-white"
+                  style="font-size: 14px"
+                  >Terms Of Service</a
+                >
+                <a
+                  href="sitemap.html"
+                  class="text-decoration-none text-white"
+                  style="font-size: 14px"
+                  >Site Map</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
