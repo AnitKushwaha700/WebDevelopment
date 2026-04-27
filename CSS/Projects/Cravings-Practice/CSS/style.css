@@ -208,10 +208,24 @@ i, .values-heading{
   border-radius: 50px;
   background-color: var(--color-primary);
 }
+
 #last-second-section{
   background-color: var(--color-primary);
   .button{
     background-color: var(--color-primary);
     color: var(--color-primary);
+  }
+}
+
+#order-Restorent-section{
+  background-color: var(--color-base-200);
+  button{
+    background-color: var(--color-primary);
+  }
+  .card{
+    background-color: var(--color-base-100);
+    .small-btn{
+      background-color: var(--color-base-200);
+    }
   }
 }
