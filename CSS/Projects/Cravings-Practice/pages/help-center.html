@@ -61,22 +61,19 @@
     <!-- ------------------------------------ Main -------------------------------- -->
 
     <main id="help-main">
-        <img src="../images/HelpPage.png" class="help-bg-img" alt="">
-      <div class="container py-4">
+      <img src="../images/HelpPage.png" class="help-bg-img" alt="" />
+      <div class="container">
         <div class="row d-flex justify-content-center">
           <div
             class="col-lg-8 col-md-10 bg-black rounded-4 bg-opacity-75 px-3 py-4"
           >
-            <!-- Header -->
             <div
               class="text-center align-items-center d-grid justify-content-center mb-2"
             >
               <div
                 class="help-heading d-flex justify-content-center align-items-center"
               >
-                <i
-                  class="bi bi-question-circle-fill px-3 fs-2 questionmark-icon"
-                ></i>
+                <i class="bi bi-question-circle-fill px-3 fs-2"></i>
                 <h1 class="fw-bold mb-2">Help Center</h1>
               </div>
               <p class="text-white">
@@ -267,7 +264,7 @@
                     <div class="position-relative">
                       <input
                         type="email"
-                        class="form-control help-center-input form-control-sm bg-light"
+                        class="form-control help-center-input form-control-sm"
                         placeholder="Enter your email"
                         style="height: 38px"
                       />
@@ -277,7 +274,7 @@
                   <div class="mb-3">
                     <div class="position-relative">
                       <select
-                        class="form-select help-center-input form-control form-select-sm bg-light"
+                        class="form-select help-center-input form-control form-select-sm"
                         style="height: 38px"
                       >
                         <option selected disabled>Select issue type</option>
@@ -295,7 +292,7 @@
                     <div class="position-relative">
                       <input
                         type="text"
-                        class="form-control help-center-input form-control-sm bg-light"
+                        class="form-control help-center-input form-control-sm"
                         placeholder="e.g. ORD-00123"
                         style="height: 38px"
                       />
@@ -304,7 +301,7 @@
 
                   <div class="mb-3">
                     <textarea
-                      class="form-control bg-light help-center-input"
+                      class="form-control help-center-input help-textarea"
                       rows="3"
                       placeholder="Please describe the problem in detail..."
                     ></textarea>
@@ -312,7 +309,7 @@
 
                   <div class="mt-4">
                     <button
-                      class="help-btn-submit w-100 px-3 py-2 border-0 rounded-2 fs-5 btn-help-center"
+                      class="help-button w-100 px-3 py-2 border-0 rounded-2 fs-5 btn-help-center text-white"
                     >
                       Submit Ticket
                     </button>
@@ -326,7 +323,6 @@
     </main>
 
     <!-- -------------------------------- Footer -------------------------------- -->
-
     <footer style="background-color: var(--color-neutral)">
       <div class="text-center container text-white pt-5 pb-4">
         <p class="small opacity-75 pb-4">
@@ -334,114 +330,126 @@
           restaurants and riders. ---
         </p>
         <div class="row gx-5 gy-3">
-          <div class="col-3">
+          <div class="col-12 col-md-3 mb-2 text-start text-md-center">
             <img src="../images/circleLogo-DpCri5UD.png" width="120px" alt="" />
           </div>
 
-          <div class="col-2 d-grid text-start">
+          <div class="col-12 col-md-2 mb-2 text-start d-grid gap-1">
             <p>Quick Links</p>
             <a
-              href="../index.html"
+              href="index.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Home</a
             >
             <a
-              href="about.html"
+              href="pages/about.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >About</a
             >
             <a
-              href="order-now.html"
+              href="pages/order-now.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Order-Now</a
             >
           </div>
 
-          <div class="col-2 text-start">
+          <div class="col-12 col-md-2 mb-2 d-grid gap-1 text-start">
             <p>For Restaurants</p>
             <a
-              href="partner.html"
+              href="pages/partner.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Partner With Us</a
             >
             <a
-              href="restaurant-menu.html"
+              href="pages/restaurant-menu.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Restaurant Dashboard</a
             >
           </div>
 
-          <div class="col-2 text-start">
+          <div class="col-12 col-md-2 mb-2 d-grid gap-1 text-start">
             <p>For Riders</p>
             <a
-              href="register.html"
+              href="pages/register.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Become a Rider</a
             >
             <a
-              href="register.html"
+              href="pages/register.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Rider Dashboard</a
             >
           </div>
 
-          <div class="col-3 d-grid text-start">
+          <div class="col-12 col-md-3 mb-2 d-grid gap-1 text-start">
             <p>Feedback & Restaurant</p>
             <a
-              href="feedback.html"
+              href="pages/feedback.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Submit Feedback</a
             >
             <a
-              href="help-center.html"
+              href="pages/help-center.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Help Center</a
             >
             <a
-              href="contact.html"
+              href="pages/contact.html"
               class="text-decoration-none text-white"
               style="font-size: 14px"
               >Contact Us</a
             >
           </div>
 
-          <div class="justify-content-center container" style="width: 90%">
-            <hr class="opacity-100 mt-5" />
+          <hr class="opacity-100 mt-5" />
 
-            <div class="d-flex justify-content-between pt-3">
-              <div>
-                <p style="font-size: 14px">
+          <div class="container">
+            <div class="row text-center text-md-start align-items-center">
+              <!-- Left -->
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <p class="mb-0" style="font-size: 14px">
                   © 2026 Cravings. All rights reserved.
                 </p>
               </div>
-              <div class="d-flex gap-4">
-                <a
-                  href="privacy-policy.html"
-                  class="text-decoration-none text-white"
-                  style="font-size: 14px"
-                  >privacy Policy</a
+
+              <!-- Right -->
+              <div class="col-12 col-md-6">
+                <div
+                  class="d-flex flex-md-row gap-4 gap-md-4 justify-content-center justify-content-md-end"
                 >
-                <a
-                  href="terms-of-service.html"
-                  class="text-decoration-none text-white"
-                  style="font-size: 14px"
-                  >Terms Of Service</a
-                >
-                <a
-                  href="sitemap.html"
-                  class="text-decoration-none text-white"
-                  style="font-size: 14px"
-                  >Site Map</a
-                >
+                  <a
+                    href="pages/privacy-policy.html"
+                    class="text-decoration-none text-white"
+                    style="font-size: 14px"
+                  >
+                    Privacy Policy
+                  </a>
+
+                  <a
+                    href="pages/terms-of-service.html"
+                    class="text-decoration-none text-white"
+                    style="font-size: 14px"
+                  >
+                    Terms Of Service
+                  </a>
+
+                  <a
+                    href="pages/sitemap.html"
+                    class="text-decoration-none text-white"
+                    style="font-size: 14px"
+                  >
+                    Site Map
+                  </a>
+                </div>
               </div>
             </div>
           </div>

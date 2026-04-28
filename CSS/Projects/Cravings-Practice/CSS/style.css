@@ -250,23 +250,41 @@ i,
 }
 
 /* ----help-page--------- */
+
 #help-main {
   position: relative;
-
-  .help-bg-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -1;
-    height: 100vh;
-    width: 99vw;
-  }
-  .help-heading,.questionmark-icon{
-    color: var(--color-primary)!important;
-  }
-  i{
-    color: white!important;
-    padding-right: 10px;
-  }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
 }
+
+.help-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#help-main input,
+#help-main select,
+#help-main .help-textarea {
+  background-color: #9D9FA1;
+}
+
+.help-heading{
+  color: var(--color-primary) !important;
+}
+
+#help-main i{
+  color: white !important;
+  padding-right: 10px;
+}
+
+.help-button {
+  background-color: var(--color-primary);
+} 
