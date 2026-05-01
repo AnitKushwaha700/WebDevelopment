@@ -14,7 +14,7 @@ if (age >= 18) {
   console.log("You can't vote");
 }
 
-// 3 //
+// 3 //3
 let x = 6;
 if (x % 2 == 0) {
   console.log("Even");
