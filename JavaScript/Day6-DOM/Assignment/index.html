@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Example</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="d-flex justify-content-center align-items-center vh-100 bg-light gap-5"
+  >
+    <!-- // ----------------------------------- Assignment-1 ----------------------------------------------// -->
+
+    <div class="form-box p-4 w-25 bg-white border border-2 rounded-3">
+      <h4 class="text-center">Assignment-1</h4>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter Name"
+        class="form-control mb-3"
+      />
+      <input
+        type="text"
+        id="city"
+        placeholder="Enter City"
+        class="form-control mb-3"
+      />
+
+      <button onclick="submit1()" class="btn btn-primary w-100">Submit</button>
+
+      <div
+        class="container border p-4 shadow mt-3 rounded-3 divHide1"
+        id="dataCard1"
+      >
+        <span id="myName">Name :</span>
+        <span id="myCity">city :</span>
+      </div>
+    </div>
+
+    <!-- // ----------------------------------- Assignment-2 ----------------------------------------------// -->
+
+    <div class="form-box p-4 w-25 bg-white border border-2 rounded-3">
+      <h4 class="text-center">Assignment-2</h4>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter email"
+        class="form-control mb-3"
+      />
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        class="form-control mb-3"
+      />
+
+      <button onclick="submit2()" class="btn btn-primary w-100">Submit</button>
+
+      <div
+        class="container border p-4 shadow mt-3 rounded-3 divHide2"
+        id="dataCard2"
+      >
+        <span id="myEmail">Email :</span>
+        <span id="myPassword">Password :</span>
+      </div>
+    </div>
+
+
+    <!-- // ----------------------------------- Assignment-3 ----------------------------------------------// -->
+
+    <div class="form-box p-4 w-25 bg-white border border-2 rounded-3">
+      <h4 class="text-center">Assignment-3</h4>
+
+      <input
+        type="text"
+        id="First"
+        placeholder="Enter First name"
+        class="form-control mb-3"
+      />
+      <input
+        type="text"
+        id="Last"
+        placeholder="Enter Last name"
+        class="form-control mb-3"
+      />
+
+      <button onclick="submit3()" class="btn btn-primary w-100">Submit</button>
+
+      <div
+        class="container border p-4 shadow mt-3 rounded-3 divHide3"
+        id="dataCard3"
+      >
+        <span id="firstName">First Name :</span>
+        <span id="lastName">Last Name :</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
