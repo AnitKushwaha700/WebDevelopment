@@ -12,7 +12,7 @@ fd.map((Element, idx) => {
   console.log(idx);
 });
 
-// -------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------//
 
 let fDAta = [
   {
@@ -100,7 +100,8 @@ const studentData =
     course: "Computer Science",
   };
 
-console.log("---------------------------------"+studentData["marks"]["english"]);
+console.log("-----------------------"+studentData["marks"]["english"]);
+console.log("-------------------------"+studentData.marks.english);
 
 // ------------------------------------------------------------------ //
 
@@ -114,7 +115,7 @@ console.log(Object.keys(Aniket));
 console.log(Object.values(Aniket));
 console.log(Object.entries(Aniket));
 
-// --------------------------------------------------------------------- //
+// ---------------------------------------------Array-------------------------------------- //
 
 let ar = [20, , 20, 22, 33, 44, 53, 43, 4, 67];
 ar.sort((a, b) => a - b);
@@ -133,8 +134,40 @@ console.log(ar2.find((val) => val > 30));
 
 console.log(ar2.slice(0, 4));
 
+// ------------------------------------ string --------------------------------//
+
 let ar3 = "this is a  vs code for web-development";
 
 console.log(ar3);
 console.log(ar3.split(" "));
 console.log(ar3.split("-"));
+
+
+let str = "This is a Webdev"
+
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.charAt(5));
+
+
+
+let a = 3.14;
+console.log(a);
+console.log(typeof a);
+let b = a.toString();
+console.log(b);
+
+
+
+let c = 3.24542533444433244;
+let d = 3.24;
+console.log(c.toFixed(3));
+console.log(d.toFixed(6));
+
+
+
+
+
+
+
+
