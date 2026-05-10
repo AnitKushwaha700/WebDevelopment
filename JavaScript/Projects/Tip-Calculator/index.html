@@ -29,13 +29,14 @@
               pattern="[0-9]+"
               class="border-0 w-100"
               placeholder="Amount to be paid"
+              id="Amount"
             />
             <i class="bi bi-currency-rupee"></i>
           </div>
         </div>
         <div class="d-grid">
-          <label for="dropDown form-control">How was the service?</label>
-          <select id="dropDown">
+          <label for="dropDown">How was the service?</label>
+          <select id="dropDown form-control">
             <option>Select</option>
             <option>25% - Top Notch</option>
             <option>20% - Excellent</option>
@@ -49,10 +50,11 @@
           <input
             type="number"
             placeholder="Number of people sharing the bill"
+            class="form-control"
             id="numberPersons"
           />
         </div>
-        <button class="bg-info p-2 px-3 text-white border-0">Calculate</button>
+        <button id="submit" class="bg-info p-2 px-3 text-white border-0 my-3">Calculate</button>
       </form>
     </div>
 

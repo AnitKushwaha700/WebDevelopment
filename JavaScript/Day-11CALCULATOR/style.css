@@ -1,0 +1,46 @@
+#imgDiv {
+  background-image: url("./CalculatorBGImage.png");
+}
+
+.TopDiv {
+  background-color: #d1e7dd;
+  input {
+    background-color: #d1e7dd;
+  }
+}
+
+.BottomDiv {
+  background-color: #f8d7da;
+}
+
+.btnn {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0;
+  background-color: white;
+}
+
+.oprBtn {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #ffc107;
+}
+
+.submitBtn {
+  background-color: #198754;
+  color: white;
+}
+
+button:active {
+  box-shadow: [horizontal-offset] [vertical-offset] [blur-radius]
+    [spread-radius] [color];
+}
+""
+label {
+  width: 100%;
+}
