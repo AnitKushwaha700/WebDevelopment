@@ -40,7 +40,7 @@ button:active {
   box-shadow: [horizontal-offset] [vertical-offset] [blur-radius]
     [spread-radius] [color];
 }
-""
+
 label {
   width: 100%;
 }
