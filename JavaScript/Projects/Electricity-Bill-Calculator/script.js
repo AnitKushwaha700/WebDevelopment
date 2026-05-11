@@ -1,18 +1,107 @@
-document.querySelector("form").addEventListener("submit", (event) => {
-  event.preventDefault();
+const calculateBtn = document.getElementById("calculateBtn");
 
-  const dob = document.getElementById("DOB").value;
-  const currDate = document.getElementById("CurrentDate").value;
+calculateBtn.addEventListener("click", () => {
 
-  let curYear = currDate.split("-");
-  console.log(curYear);
+  const units = Number(document.getElementById("units").value);
 
-  const Age = Number(currDate.split("-")[0]) - Number(dob.split("-")[0]);
-  const month = Number(currDate.split("-")[1]) - Number(dob.split("-")[1]);
-  const day = Number(currDate.split("-")[2]) - Number(dob.split("-")[2]);
+  let slab1 = 0;
+  let slab2 = 0;
+  let slab3 = 0;
+  let slab4 = 0;
 
-  document.getElementById("DOB").value = "";
-  document.getElementById("CurrentDate").value = "";
+  // First 50 Units
+  if (units <= 50) {
 
-  document.getElementById("MyAge").innerText = Age + "-" + month + "-" + day;
+    slab1 = units * 0.5;
+
+  }
+
+  // 51 - 200 Units
+  else if (units <= 200) {
+
+    slab1 = 50 * 0.5;
+
+    slab2 = (units - 50) * 0.75;
+
+  }
+
+  // 201 - 450 Units
+  else if (units <= 450) {
+
+    slab1 = 50 * 0.5;
+
+    slab2 = 150 * 0.75;
+
+    slab3 = (units - 200) * 1.2;
+
+  }
+
+  // Above 450 Units
+  else {
+
+    slab1 = 50 * 0.5;
+
+    slab2 = 150 * 0.75;
+
+    slab3 = 250 * 1.2;
+
+    slab4 = (units - 450) * 1.5;
+
+  }
+
+  // Subtotal
+  const subtotal = slab1 + slab2 + slab3 + slab4;
+
+  // 20% Surcharge
+  const surcharge = subtotal * 0.2;
+
+  // Grand Total
+  const grandTotal = subtotal + surcharge;
+
+  // Show Result
+  document.getElementById("slab1").innerText =
+    `₹${slab1.toFixed(2)}`;
+
+  document.getElementById("slab2").innerText =
+    `₹${slab2.toFixed(2)}`;
+
+  document.getElementById("slab3").innerText =
+    `₹${slab3.toFixed(2)}`;
+
+  document.getElementById("slab4").innerText =
+    `₹${slab4.toFixed(2)}`;
+
+  document.getElementById("subtotal").innerText =
+    `₹${subtotal.toFixed(2)}`;
+
+  document.getElementById("surcharge").innerText =
+    `₹${surcharge.toFixed(2)}`;
+
+  document.getElementById("grandTotal").innerText =
+    `₹${grandTotal.toFixed(2)}`;
+
+});
+
+
+// Reset Button
+const resetBtn = document.getElementById("resetBtn");
+
+resetBtn.addEventListener("click", () => {
+
+  document.getElementById("units").value = "";
+
+  document.getElementById("slab1").innerText = "₹0.00";
+
+  document.getElementById("slab2").innerText = "₹0.00";
+
+  document.getElementById("slab3").innerText = "₹0.00";
+
+  document.getElementById("slab4").innerText = "₹0.00";
+
+  document.getElementById("subtotal").innerText = "₹0.00";
+
+  document.getElementById("surcharge").innerText = "₹0.00";
+
+  document.getElementById("grandTotal").innerText = "₹0.00";
+
 });

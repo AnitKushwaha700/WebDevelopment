@@ -3,37 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini-Calculator</title>
+
+    <title>Electricity Bill Calculator</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
   </head>
+
   <body>
-    <div class="w-25 bg-light rounded shadow border mx-auto mt-5 p-4">
-      <h1 class="text-center mb-3">Age Calculator</h1>
+    <div class="container py-5" >
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card p-4 shadow ">
+            <h2 class="text-center mb-4">Electricity Bill Calculator</h2>
 
-      <form
-        class="d-flex flex-column align-items-center p-3 gap-3 justify-content-center"
-      >
-        <label for="DOB">Enter your Date of Birth</label>
-        <input type="date" name="DOB" id="DOB" class="form-control" />
-        <label for="CurrentDate">Choose current Date</label>
-        <input type="date" name="DOB" id="CurrentDate" class="form-control" />
-        <button type="submit" class="btn btn-primary">Calculator Age</button>
-      </form>
+            <!-- Input -->
+            <div class="mb-3">
+              <label class="form-label">Enter Units</label>
 
-      <div class="fw-bold text-center ">
-        Your Age is : <span id="MyAge">XX-XX-XX</span>
+              <input
+                type="number"
+                id="units"
+                class="form-control"
+                placeholder="Enter units"
+              />
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2 mb-4">
+              <button class="btn btn-primary w-100" id="calculateBtn">
+                Calculate
+              </button>
+
+              <button class="btn btn-danger w-100" id="resetBtn">Reset</button>
+            </div>
+
+            <!-- Result -->
+            <div class="border rounded p-3">
+              <h4 class="mb-3">Bill Details</h4>
+
+              <p>
+                First 50 Units :
+                <span id="slab1">₹0.00</span>
+              </p>
+
+              <p>
+                51 - 200 Units :
+                <span id="slab2">₹0.00</span>
+              </p>
+
+              <p>
+                201 - 450 Units :
+                <span id="slab3">₹0.00</span>
+              </p>
+
+              <p>
+                Above 450 Units :
+                <span id="slab4">₹0.00</span>
+              </p>
+
+              <hr />
+
+              <p>
+                Subtotal :
+                <span id="subtotal">₹0.00</span>
+              </p>
+
+              <p>
+                Surcharge (20%) :
+                <span id="surcharge">₹0.00</span>
+              </p>
+
+              <h5>
+                Grand Total :
+                <span id="grandTotal">₹0.00</span>
+              </h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- BootStrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
