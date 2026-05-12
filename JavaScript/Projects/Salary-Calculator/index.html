@@ -15,20 +15,28 @@
   </head>
   <body>
     <div class="w-25 bg-light rounded shadow border mx-auto mt-5 p-4">
-      <h1 class="text-center mb-3">Age Calculator</h1>
+      <h1 class="text-center mb-3 fs-3 bg-primary rounded text-white p-3">
+        Salary Calculator
+      </h1>
 
       <form
-        class="d-flex flex-column align-items-center p-3 gap-3 justify-content-center"
+        class="d-flex flex-column align-items-center p-3 gap-5 justify-content-center"
       >
-        <label for="DOB">Enter your Date of Birth</label>
-        <input type="date" name="DOB" id="DOB" class="form-control" />
-        <label for="CurrentDate">Choose current Date</label>
-        <input type="date" name="DOB" id="CurrentDate" class="form-control" />
-        <button type="submit" class="btn btn-primary">Calculator Age</button>
+        <input type="number" name="DOB" id="CurrentDate" class="form-control border border-primary border-2" />
+        <button type="submit" class="btn btn-danger" onclick="CalculateSalary">
+          Calculate Gross Salary
+        </button>
       </form>
 
-      <div class="fw-bold text-center ">
-        Your Age is : <span id="MyAge">XX-XX-XX</span>
+      <div class="fw-bold text-center p-2">
+        Salary is :
+        <p id="mySalary"></p>
+        HRA :
+        <p id="mySalary"></p>
+        DA :
+        <p id="mySalary"></p>
+        Gross Salary :
+        <p id="mySalary"></p>
       </div>
     </div>
 
