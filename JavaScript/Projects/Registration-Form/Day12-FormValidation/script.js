@@ -1,9 +1,22 @@
-function Submit() {
+function submitForm() {
+  const name = document.getElementById("fullName").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
 
-  const fn = document.getElementById("fullName").value;
-  const ph = document.getElementById("phone").value;
-  const em = document.getElementById("email").value;
+  if (name === "") {
+    alert("Enter your name");
+    return;
+  }
 
-  const ps = document.getElementById("password").value;
+  if (email === "") {
+    alert("Enter your email");
+    return;
+  }
 
+  if (phone === "") {
+    alert("Enter your phone number");
+    return;
+  }
+
+  alert("Form Submitted Successfully");
 }
