@@ -20,9 +20,9 @@
     </header>
 
     <main>
-      <div id="OuterDiv" class="vh-100 d-flex justify-content-center mt-5">
-        <div id="innerDiv" class="w-50 d-grid gap-5">
-          <div class="d-grid gap-4 ms-3 card p-4 ">
+      <div id="OuterDiv" class="d-flex justify-content-center mt-5">
+        <div id="innerDiv" class="w-75 d-grid gap-5 card pe-3 py-4 ">
+          <div class="d-grid gap-4 ms-3 card p-4">
             <h3 class="text-center">Personal Information</h3>
             <div>
               <label for="fullName">Full Name</label>
@@ -35,20 +35,41 @@
             </div>
             <div>
               <label for="email">Email Address</label>
-              <input type="email" id="email" placeholder="Enter your email" class="form-control"/>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                class="form-control"
+              />
             </div>
             <div>
               <label for="number">Mobile Number</label>
-              <input type="phone" id="phone" placeholder="Enter your number"class="form-control" />
+              <input
+                type="phone"
+                id="phone"
+                placeholder="Enter your number"
+                class="form-control"
+              />
             </div>
             <div>
               <label for="Date">Date Of Birth</label>
-              <input type="date" id="Date" placeholder="Enter your DOB"class="form-control" />
+              <input
+                type="date"
+                id="Date"
+                placeholder="Enter your DOB"
+                class="form-control"
+              />
+            </div>
+            <div>
+              <label for="">Gender : </label>
+              <input type="checkbox">Male
+              <input type="checkbox">Female
+              <input type="checkbox">Others
             </div>
           </div>
 
-          <div class="card p-4 " >
-            <div class="d-grid gap-3 ">
+          <div class="d-grid gap-4 ms-3 card p-4">
+            <div class="d-grid gap-3">
               <h3 class="text-center">Academic Details</h3>
               <label for="">Last Completed Qualification</label>
               <select class="p-2">
@@ -57,22 +78,22 @@
                 <option value="12th">12th</option>
                 <option value="graduation">Graduation</option>
                 <option value="postGraduation">Post Graduation</option>
-            </select>
+              </select>
 
-            <label for="">Percentage/Grade in Last Qualification</label>
-            <select class="p-2">
-              <option>Select</option>
-              <option value="A">A+</option>
-              <option value="A+">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-          </div>
+              <label for="">Percentage/Grade in Last Qualification</label>
+              <select class="p-2">
+                <option>Select</option>
+                <option value="A">A+</option>
+                <option value="A+">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+            </div>
           </div>
 
-          <div class="">
-            <div class="d-grid gap-3 pt-5">
+          <div class="d-grid gap-4 ms-3 card p-4">
+            <div class="d-grid gap-3">
               <h3 class="text-center">Course Information</h3>
               <label for="">Preferred Course</label>
               <select class="p-2">
@@ -81,48 +102,68 @@
                 <option value="NEET">NEET</option>
                 <option value="Banking Exams">Banking Exams</option>
                 <option value="UPSC">UPSC</option>
-            </select>
+              </select>
 
-            <label for="">Batch Timing Preference</label>
-            <select class="p-2">
-              <option>Select</option>
-              <option value="Morning">Morning+</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
-              <option value="Weekend">Weekend</option>
-            </select>
+              <label for="">Batch Timing Preference</label>
+              <select class="p-2">
+                <option>Select</option>
+                <option value="Morning">Morning+</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Weekend">Weekend</option>
+              </select>
+            </div>
           </div>
 
-          <div >
-            <div class="d-grid gap-3 pt-5">
+          <div class="d-grid gap-4 ms-3 card p-4">
+            <div class="d-grid gap-3">
               <h3 class="text-center">Address</h3>
               <label for="">Residential Address</label>
               <textarea name="" id=""></textarea>
 
               <label for="city">City</label>
-              <input type="text" id="city" placeholder="Enter your city">
+              <input
+                type="text"
+                id="city"
+                placeholder="Enter your city"
+                class="p-2"
+              />
 
               <label for="pin">Pin Code</label>
-              <input type="number" id="pin" placeholder="Enter your Pin Code">
+              <input
+                type="number"
+                id="pin"
+                placeholder="Enter your Pin Code"
+                class="p-2"
+              />
+            </div>
           </div>
 
-            <div class="d-grid gap-3 pt-5">
-            <h1 class="text-center">Guardian Details</h1>
-            
-              <label for="guardianName">Guardian’s Full Name</label>
-              <input type="text" id="guardianName" placeholder="Guardian’s Name">
+          <div class="d-grid gap-4 ms-3 card p-4">
+            <h3 class="text-center">Guardian Details</h3>
 
-              <label for="guardianContact">Guardian’s Contact Numbe</label>
-              <input type="number" id="guardianContact" placeholder="Guardian’s Numbe">
+            <label for="guardianName">Guardian’s Full Name</label>
+            <input
+              type="text"
+              id="guardianName"
+              placeholder="Guardian’s Name"
+              class="p-2"
+            />
 
-
+            <label for="guardianContact">Guardian’s Contact Numbe</label>
+            <input
+              type="number"
+              id="guardianContact"
+              placeholder="Guardian’s Numbe"
+              class="p-2"
+            />
           </div>
 
-            <div class="d-grid gap-3 pt-5">
-            <h1 class="text-center">Additional Information</h1>
+          <div class="d-grid gap-4 ms-3 card p-4">
+            <h3 class="text-center">Additional Information</h3>
 
             <label for="">How did you hear about us?</label>
-            <select class="">
+            <select class="p-2">
               <option value="">Friends</option>
               <option value="">Online Ad</option>
               <option value="">Newspaper</option>
@@ -131,11 +172,7 @@
             </select>
             <label for="">Special Requirements</label>
             <textarea name="" id=""></textarea>
-            
           </div>
-
-
-            
         </div>
       </div>
     </main>
