@@ -3,183 +3,450 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration-Form</title>
+    <title>Registration Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-  />
-  <body>
+  <body class="bg-light">
+
+    <!-- Header -->
     <header>
-      <h1 class="bg-primary text-white text-center p-3">Registration-Form</h1>
+      <h1 class="bg-primary text-white text-center py-3">
+        Registration Form
+      </h1>
     </header>
 
-    <main>
-      <div id="OuterDiv" class="d-flex justify-content-center mt-5">
-        <div id="innerDiv" class="w-75 d-grid gap-5 card pe-3 py-4">
-          <div class="d-grid gap-4 ms-3 card p-4">
-            <h3 class="text-center">Personal Information</h3>
-            <div>
-              <label for="fullName">Full Name</label>
-              <input
-                type="text"
-                id="fullName"
-                placeholder="Enter your name"
-                class="form-control"
-              />
+    <!-- Main -->
+    <main class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <form id="registrationForm" class="card shadow p-4">
+
+            <!-- Personal Details -->
+            <div class="card p-4 mb-4">
+              <h3 class="text-center mb-4">
+                Personal Details
+              </h3>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="fullName"
+                  class="form-control"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Mobile Number
+                </label>
+
+                <input
+                  type="number"
+                  id="number"
+                  class="form-control"
+                  placeholder="Enter mobile number"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Date of Birth
+                </label>
+
+                <input
+                  type="date"
+                  id="DOB"
+                  class="form-control"
+                />
+              </div>
+
+              <div>
+                <label class="form-label d-block">
+                  Gender
+                </label>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    id="male"
+                    class="form-check-input"
+                  />
+
+                  <label
+                    for="male"
+                    class="form-check-label"
+                  >
+                    Male
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    id="female"
+                    class="form-check-input"
+                  />
+
+                  <label
+                    for="female"
+                    class="form-check-label"
+                  >
+                    Female
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Other"
+                    id="other"
+                    class="form-check-input"
+                  />
+
+                  <label
+                    for="other"
+                    class="form-check-label"
+                  >
+                    Other
+                  </label>
+                </div>
+              </div>
             </div>
-            <div>
-              <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                class="form-control"
-              />
+
+            <!-- Academic Details -->
+            <div class="card p-4 mb-4">
+              <h3 class="text-center mb-4">
+                Academic Details
+              </h3>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Qualification
+                </label>
+
+                <select
+                  id="Qualification"
+                  class="form-select"
+                >
+                  <option value="">Select</option>
+                  <option value="10th">10th</option>
+                  <option value="12th">12th</option>
+                  <option value="Graduation">
+                    Graduation
+                  </option>
+                  <option value="Post Graduation">
+                    Post Graduation
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">
+                  Grade
+                </label>
+
+                <select
+                  id="Grade"
+                  class="form-select"
+                >
+                  <option value="">Select</option>
+                  <option value="A+">A+</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                </select>
+              </div>
             </div>
-            <div>
-              <label for="number">Mobile Number</label>
-              <input
-                type="phone"
-                id="phone"
-                placeholder="Enter your number"
-                class="form-control"
-              />
+
+            <!-- Course Information -->
+            <div class="card p-4 mb-4">
+              <h3 class="text-center mb-4">
+                Course Information
+              </h3>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Preferred Course
+                </label>
+
+                <select
+                  id="Course"
+                  class="form-select"
+                >
+                  <option value="">Select</option>
+                  <option value="IIT-JEE">
+                    IIT-JEE
+                  </option>
+                  <option value="NEET">
+                    NEET
+                  </option>
+                  <option value="Banking">
+                    Banking
+                  </option>
+                  <option value="UPSC">
+                    UPSC
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label d-block">
+                  Batch Timings
+                </label>
+
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="timings"
+                    value="Morning"
+                    id="morning"
+                    class="form-check-input"
+                  />
+
+                  <label
+                    for="morning"
+                    class="form-check-label"
+                  >
+                    Morning
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="timings"
+                    value="Afternoon"
+                    id="afternoon"
+                    class="form-check-input"
+                  />
+
+                  <label
+                    for="afternoon"
+                    class="form-check-label"
+                  >
+                    Afternoon
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="timings"
+                    value="Evening"
+                    id="evening"
+                    class="form-check-input"
+                  />
+
+                  <label
+                    for="evening"
+                    class="form-check-label"
+                  >
+                    Evening
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="timings"
+                    value="Weekend"
+                    id="weekend"
+                    class="form-check-input"
+                  />
+
+                  <label
+                    for="weekend"
+                    class="form-check-label"
+                  >
+                    Weekend
+                  </label>
+                </div>
+              </div>
             </div>
-            <div>
-              <label for="Date">Date Of Birth</label>
-              <input
-                type="date"
-                id="Date"
-                placeholder="Enter your DOB"
-                class="form-control"
-              />
+
+            <!-- Address -->
+            <div class="card p-4 mb-4">
+              <h3 class="text-center mb-4">
+                Address
+              </h3>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Residential Address
+                </label>
+
+                <textarea
+                  id="Address"
+                  rows="3"
+                  class="form-control"
+                  placeholder="Enter your address"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  City
+                </label>
+
+                <input
+                  type="text"
+                  id="City"
+                  class="form-control"
+                  placeholder="Enter your city"
+                />
+              </div>
+
+              <div>
+                <label class="form-label">
+                  Pin Code
+                </label>
+
+                <input
+                  type="number"
+                  id="pinCode"
+                  class="form-control"
+                  placeholder="Enter pin code"
+                />
+              </div>
             </div>
-            <div>
-              <label for="">Gender : </label>
-              <input type="checkbox" />Male <input type="checkbox" />Female
-              <input type="checkbox" />Others
+
+            <!-- Guardian Details -->
+            <div class="card p-4 mb-4">
+              <h3 class="text-center mb-4">
+                Guardian Details
+              </h3>
+
+              <div class="mb-3">
+                <label class="form-label">
+                  Guardian Name
+                </label>
+
+                <input
+                  type="text"
+                  id="guardianName"
+                  class="form-control"
+                  placeholder="Enter guardian name"
+                />
+              </div>
+
+              <div>
+                <label class="form-label">
+                  Guardian Number
+                </label>
+
+                <input
+                  type="number"
+                  id="guardianNumber"
+                  class="form-control"
+                  placeholder="Enter guardian number"
+                />
+              </div>
             </div>
-          </div>
 
-          <div class="d-grid gap-4 ms-3 card p-4">
-            <div class="d-grid gap-3">
-              <h3 class="text-center">Academic Details</h3>
-              <label for="">Last Completed Qualification</label>
-              <select class="p-2">
-                <option>Select</option>
-                <option value="10th">10th</option>
-                <option value="12th">12th</option>
-                <option value="graduation">Graduation</option>
-                <option value="postGraduation">Post Graduation</option>
-              </select>
+            <!-- Additional Information -->
+            <div class="card p-4 mb-4">
+              <h3 class="text-center mb-4">
+                Additional Information
+              </h3>
 
-              <label for="">Percentage/Grade in Last Qualification</label>
-              <select class="p-2">
-                <option>Select</option>
-                <option value="A">A+</option>
-                <option value="A+">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-              </select>
+              <div class="mb-3">
+                <label class="form-label">
+                  Reference
+                </label>
+
+                <select
+                  id="reference"
+                  class="form-select"
+                >
+                  <option value="">Select</option>
+                  <option value="Friends">
+                    Friends
+                  </option>
+                  <option value="Online Ad">
+                    Online Ad
+                  </option>
+                  <option value="Newspaper">
+                    Newspaper
+                  </option>
+                  <option value="Social Media">
+                    Social Media
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">
+                  Special Requirements
+                </label>
+
+                <textarea
+                  id="specialRequirements"
+                  rows="3"
+                  class="form-control"
+                  placeholder="Write here..."
+                ></textarea>
+              </div>
             </div>
-          </div>
 
-          <div class="d-grid gap-4 ms-3 card p-4">
-            <div class="d-grid gap-3">
-              <h3 class="text-center">Course Information</h3>
-              <label for="">Preferred Course</label>
-              <select class="p-2">
-                <option>Select</option>
-                <option value="IT-JEE">IIT-JEE</option>
-                <option value="NEET">NEET</option>
-                <option value="Banking Exams">Banking Exams</option>
-                <option value="UPSC">UPSC</option>
-              </select>
+            <!-- Buttons -->
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-primary px-4 me-3"
+              >
+                Submit
+              </button>
 
-              <label for="">Batch Timing Preference</label>
-              <select class="p-2">
-                <option>Select</option>
-                <option value="Morning">Morning+</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Evening">Evening</option>
-                <option value="Weekend">Weekend</option>
-              </select>
+              <button
+                type="reset"
+                class="btn btn-danger px-4"
+              >
+                Reset
+              </button>
             </div>
-          </div>
 
-          <div class="d-grid gap-4 ms-3 card p-4">
-            <div class="d-grid gap-3">
-              <h3 class="text-center">Address</h3>
-              <label for="">Residential Address</label>
-              <textarea name="" id=""></textarea>
+          </form>
 
-              <label for="city">City</label>
-              <input
-                type="text"
-                id="city"
-                placeholder="Enter your city"
-                class="p-2"
-              />
-
-              <label for="pin">Pin Code</label>
-              <input
-                type="number"
-                id="pin"
-                placeholder="Enter your Pin Code"
-                class="p-2"
-              />
-            </div>
-          </div>
-
-          <div class="d-grid gap-4 ms-3 card p-4">
-            <h3 class="text-center">Guardian Details</h3>
-
-            <label for="guardianName">Guardian’s Full Name</label>
-            <input
-              type="text"
-              id="guardianName"
-              placeholder="Guardian’s Name"
-              class="p-2"
-            />
-
-            <label for="guardianContact">Guardian’s Contact Numbe</label>
-            <input
-              type="number"
-              id="guardianContact"
-              placeholder="Guardian’s Numbe"
-              class="p-2"
-            />
-          </div>
-
-          <div class="d-grid gap-4 ms-3 card p-4">
-            <h3 class="text-center">Additional Information</h3>
-
-            <label for="">How did you hear about us?</label>
-            <select class="p-2">
-              <option value="">Friends</option>
-              <option value="">Online Ad</option>
-              <option value="">Newspaper</option>
-              <option value="">Social Media</option>
-              <option value="">Other</option>
-            </select>
-            <label for="">Special Requirements</label>
-            <textarea name="" id=""></textarea>
-          </div>
         </div>
-
-        <button onclick="submitForm()" class="btn btn-primary">Submit</button>
       </div>
     </main>
 
-    <!-- BootStrap Script -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS File -->
     <script src="script.js"></script>
+
   </body>
 </html>
