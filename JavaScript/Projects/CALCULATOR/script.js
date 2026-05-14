@@ -1,5 +1,5 @@
 function Calculate(data) {
-  const equation = document.getElementById("text");
+  const equation = document.getElementById("display");
 
   if (data === "AC") {
     equation.innerText = "0";
@@ -7,7 +7,6 @@ function Calculate(data) {
   }
 
   if (data === "C") {
-
     // const eq = equation.innerText;
     // let newEQ = eq.slice(0, -1);
     // equation.innerText = newEQ;
@@ -19,9 +18,14 @@ function Calculate(data) {
   }
 
   if (data === "=") {
-    const EQ = equation.innerText;
-    const solution = eval(EQ);
-    equation.innerText = solution;
+    try {
+      const EQ = equation.innerText;
+      const solution = eval(EQ);
+
+      equation.innerText = solution;
+    } catch {
+      equation.innerText = "Error";
+    }
     return;
   }
 
@@ -30,11 +34,9 @@ function Calculate(data) {
   } else {
     equation.innerText = equation.innerText + data;
   }
-
 }
 
 document.addEventListener("keydown", (event) => {
-
   if (event.repeat) return;
 
   const key = event.key;
@@ -58,5 +60,4 @@ document.addEventListener("keydown", (event) => {
   else if (key === "Escape") {
     Calculate("AC");
   }
-
 });
