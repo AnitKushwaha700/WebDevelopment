@@ -1,23 +1,35 @@
 document
   .getElementById("registrationForm")
-  .addEventListener("submit", (event) => {
+  .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // personal details
-    const fn = document.getElementById("fullName").value;
-    const em = document.getElementById("email").value;
-    const pn = document.getElementById("number").value;
-    const gndr = document.querySelector("input[name='gender']:checked")?.value;
+    // Clear old errors
+    document.querySelectorAll(".error").forEach((item) => {
+      item.innerText = "";
+    });
+
+    // Personal Details
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("number").value.trim();
     const dob = document.getElementById("DOB").value;
 
-    // Academic details
-    const qual = document.getElementById("Qualification").value;
-    const grd = document.getElementById("Grade").value;
+    const gender = document.querySelector(
+      "input[name='gender']:checked"
+    )?.value;
 
-    // Course information
-    const crs = document.getElementById("Course").value;
+    // Academic Details
+    const qualification =
+      document.getElementById("Qualification").value;
 
+    const grade = document.getElementById("Grade").value;
+
+    // Course Information
+    const course = document.getElementById("Course").value;
+
+    // Timings
     const timings = [];
+
     document
       .querySelectorAll("input[name='timings']:checked")
       .forEach((item) => {
@@ -25,132 +37,91 @@ document
       });
 
     // Address
-    const adrs = document.getElementById("Address").value;
-    const cty = document.getElementById("City").value;
-    const pinc = document.getElementById("pinCode").value;
+    const address = document.getElementById("Address").value.trim();
+    const city = document.getElementById("City").value.trim();
+    const pinCode = document.getElementById("pinCode").value.trim();
 
-    // Guardians Details
-    const guarName = document.getElementById("guardianName").value;
-    const guarNum = document.getElementById("guardianNumber").value;
+    // Guardian Details
+    const guardianName = document
+      .getElementById("guardianName")
+      .value.trim();
 
-    // Additional information 
-    const ref = document.getElementById("reference").value;
-    const spclReq = document.getElementById("specialRequirements").value;
+    const guardianNumber = document
+      .getElementById("guardianNumber")
+      .value.trim();
 
-    console.log({
-      fn,
-      em,
-      pn,
-      gndr,
-      dob,
-      qual,
-      grd,
-      crs,
-      timings,
-      adrs,
-      cty,
-      pinc,
-      guarName,
-      guarNum,
-      ref,
-      spclReq,
-    });
+    // Additional Information
+    const reference =
+      document.getElementById("reference").value;
 
-    
-  });// SubmitButton
-document
-  .getElementById("registrationFrom")
-  .addEventListener("submit", (event) => {
-    event.preventDefault();
+    const specialRequirements =
+      document.getElementById("specialRequirements").value;
 
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const dob = document.getElementById("dob").value;
-    const gender = document.querySelector(
-      "input[name='gender']:checked",
-    )?.value;
-    const qualification = document.getElementById("qualification").value;
-    const marks = document.getElementById("marks").value;
-    const course = document.getElementById("course").value;
-    const address = document.getElementById("address").value;
-    const city = document.getElementById("city").value;
-    const pin = document.getElementById("pin").value;
+    // Validation
+    let isValid = true;
 
-    const timings = [];
-    document
-      .querySelectorAll("input[name='timings']:checked")
-      .forEach((item) => {
-        timings.push(item.value);
-      });
+    // Full Name
+    if (!/^[A-Za-z\s]+$/.test(fullName)) {
+      alert("Enter valid Full Name");
+      isValid = false;
+    }
 
-    const registrationData = {
-      FullName: fullName,
-      Email: email,
-      Phone: phone,
-      DateofBirth: dob,
-      Gender: gender,
-      Qualification: qualification,
-      Marks: marks,
-      Course: course,
-      Timings: timings,
-      Address: address,
-      City: city,
-      PinCode: pin,
-    };
+    // Email
+    else if (
+      !/^[A-Za-z0-9._]+@(gmail\.com|outlook\.com|ricr\.in)$/.test(email)
+    ) {
+      alert("Enter valid Email");
+      isValid = false;
+    }
 
-    validateData(registrationData)
-      ? (console.log("Registration Data:", registrationData),
-        alert("Registration successful! Check console for details."))
-      : alert("Registration unsuccessfull! Enter valid Data.");
+    // Phone Number
+    else if (!/^[6-9]\d{9}$/.test(phone)) {
+      alert("Enter valid Indian Mobile Number");
+      isValid = false;
+    }
+
+    // Pin Code
+    else if (!/^\d{6}$/.test(pinCode)) {
+      alert("Enter valid Pin Code");
+      isValid = false;
+    }
+
+    // Guardian Number
+    else if (!/^[6-9]\d{9}$/.test(guardianNumber)) {
+      alert("Enter valid Guardian Number");
+      isValid = false;
+    }
+
+    // Final Submit
+    if (isValid) {
+      const registrationData = {
+        fullName,
+        email,
+        phone,
+        dob,
+        gender,
+        qualification,
+        grade,
+        course,
+        timings,
+        address,
+        city,
+        pinCode,
+        guardianName,
+        guardianNumber,
+        reference,
+        specialRequirements,
+      };
+
+      console.log(registrationData);
+
+      alert("Registration Successful");
+    }
   });
 
-// ResetButton
-document
-  .getElementById("registrationFrom")
-  .addEventListener("reset", (event) => {
-    event.preventDefault();
-
-    window.location.reload();
-  });
-
-function validateData(data) {
-  document.querySelectorAll(".manualError").forEach((item) => {
-    item.innerText = "";
-  });
-
-  let isValid = true;
-
-  console.log(data);
-
-  if (!data.FullName) {
-    document.getElementById("fullNameError").innerText = "Full Name Required";
-    isValid = false;
-  } else if (!/^[A-Za-z\s]+$/.test(data.FullName)) {
-    document.getElementById("fullNameError").innerText =
-      "Only alphabets and spaces are allowed";
-    isValid = false;
-  }
-
-  if (!/^[A-Za-z\d\.\_]+@(gmail.com|outlook.com|ricr.in)$/.test(data.Email)) {
-    document.getElementById("emailError").innerText =
-      "Only standard Email format allowed with gmail.com";
-    isValid = false;
-  }
-
-  if (!/^[6-9]\d{9}$/.test(data.Phone)) {
-    document.getElementById("phoneError").innerText =
-      "Only Indian mobile numbers allowed";
-    isValid = false;
-  }
-
-  return isValid;
-}
-
+// Reset Button
 document
   .getElementById("registrationForm")
-  .addEventListener("reset", (event) => {
-    event.preventDefault();
-
+  .addEventListener("reset", function () {
     window.location.reload();
   });
