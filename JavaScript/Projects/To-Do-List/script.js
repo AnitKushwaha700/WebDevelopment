@@ -114,7 +114,7 @@ function removeTaskFromLocalStorage(taskItem) {
   console.log(taskItem);
 
   const TaskArray = JSON.parse(localStorage.getItem("toDoTask"));
-
+  
   console.log(TaskArray);
 
   const newTaskArray = TaskArray.filter((item) => item !== taskItem);
