@@ -3,45 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini-Calculator</title>
+    <title>Salary Calculator</title>
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
   </head>
-  <body>
-    <div class="w-25 bg-light rounded shadow border mx-auto mt-5 p-4">
-      <h1 class="text-center mb-3 fs-3 bg-primary rounded text-white p-3">
-        Salary Calculator
-      </h1>
+  <body class="bg-light">
 
-      <form
-        class="d-flex flex-column align-items-center p-3 gap-5 justify-content-center"
-      >
-        <input type="number" name="DOB" id="CurrentDate" class="form-control border border-primary border-2" />
-        <button type="submit" class="btn btn-danger" onclick="CalculateSalary">
-          Calculate Gross Salary
-        </button>
-      </form>
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg border-0 rounded-4">
+          
+          <div class="card-header bg-success text-white text-center py-3 rounded-top-4">
+            <h3 class="mb-0">Salary Calculator</h3>
+          </div>
 
-      <div class="fw-bold text-center p-2">
-        Salary is :
-        <p id="mySalary"></p>
-        HRA :
-        <p id="mySalary"></p>
-        DA :
-        <p id="mySalary"></p>
-        Gross Salary :
-        <p id="mySalary"></p>
+          <div class="card-body p-4">
+
+            <!-- Success Message -->
+            <div id="successMessage" class="alert alert-success d-none">
+              Salary calculated successfully!
+            </div>
+
+            <!-- Salary Input -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Basic Salary</label>
+
+              <input
+                type="number"
+                id="basicSalary"
+                class="form-control form-control-lg"
+                placeholder="Enter Basic Salary"
+              />
+
+              <small id="errorMessage" class="text-danger"></small>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2">
+              <button id="calculateBtn" class="btn btn-success w-100">
+                <span id="btnText">Calculate Gross Salary</span>
+                <span
+                  id="spinner"
+                  class="spinner-border spinner-border-sm d-none ms-2"
+                ></span>
+              </button>
+
+              <button id="resetBtn" class="btn btn-secondary w-100">
+                Reset
+              </button>
+            </div>
+
+            <!-- Result -->
+            <div id="resultCard" class="card mt-4 border-success d-none">
+              <div class="card-body">
+                <p class="mb-2">
+                  <strong>Basic Salary:</strong>
+                  <span id="resultBasic"></span>
+                </p>
+
+                <p class="mb-2">
+                  <strong>HRA:</strong>
+                  <span id="resultHra"></span>
+                </p>
+
+                <p class="mb-2">
+                  <strong>DA:</strong>
+                  <span id="resultDa"></span>
+                </p>
+
+                <hr />
+
+                <h5 class="text-success">
+                  <strong>Gross Salary:</strong>
+                  <span id="resultGross"></span>
+                </h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- BootStrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
