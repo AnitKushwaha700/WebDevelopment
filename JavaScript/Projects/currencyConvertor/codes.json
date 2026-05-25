@@ -1,0 +1,62 @@
+[
+  {
+    "Country": "India",
+    "Currency_Name": "Indian Rupee",
+    "Currency_Code": "inr",
+    "Country_Code": "IN"
+  },
+  {
+    "Country": "United States",
+    "Currency_Name": "US Dollar",
+    "Currency_Code": "usd",
+    "Country_Code": "US"
+  },
+  {
+    "Country": "United Kingdom",
+    "Currency_Name": "Pound Sterling",
+    "Currency_Code": "gbp",
+    "Country_Code": "GB"
+  },
+  {
+    "Country": "Japan",
+    "Currency_Name": "Japanese Yen",
+    "Currency_Code": "jpy",
+    "Country_Code": "JP"
+  },
+  {
+    "Country": "Canada",
+    "Currency_Name": "Canadian Dollar",
+    "Currency_Code": "cad",
+    "Country_Code": "CA"
+  },
+  {
+    "Country": "Australia",
+    "Currency_Name": "Australian Dollar",
+    "Currency_Code": "aud",
+    "Country_Code": "AU"
+  },
+  {
+    "Country": "Germany",
+    "Currency_Name": "Euro",
+    "Currency_Code": "eur",
+    "Country_Code": "DE"
+  },
+  {
+    "Country": "France",
+    "Currency_Name": "Euro",
+    "Currency_Code": "eur",
+    "Country_Code": "FR"
+  },
+  {
+    "Country": "China",
+    "Currency_Name": "Chinese Yuan",
+    "Currency_Code": "cny",
+    "Country_Code": "CN"
+  },
+  {
+    "Country": "Brazil",
+    "Currency_Name": "Brazilian Real",
+    "Currency_Code": "brl",
+    "Country_Code": "BR"
+  }
+]

@@ -1,129 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
 
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 </head>
 
 <body
 style="
-    background-image: linear-gradient(
-        rgba(255,255,255,0.45),
-        rgba(255,255,255,0.45)
-    ),
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
     url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
+  background-size: cover;
+  background-position: center;
 ;"
 >
 
-<div class="container py-5">
-    <div class="row justify-content-center align-items-center min-vh-100">
-        <div class="col-md-8 col-lg-6">
+<div class="container py-4">
+  <div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-lg-7 col-md-9">
 
-            <!-- Main Card -->
-            <div
-                class="card border-0 shadow-lg rounded-5 p-4"
-                style="
-                    background: rgba(255,255,255,0.90);
-                    backdrop-filter: blur(8px);
-                "
-            >
+      <!-- Main Weather Card -->
+      <div
+        class="card border-0 shadow-lg rounded-5 p-4"
+        style="
+          background: rgba(255,255,255,0.92);
+          backdrop-filter: blur(8px);
+        "
+      >
 
-                <!-- Title -->
-                <h2 class="text-center text-primary fw-bold mb-4">
-                    🌤 Weather Dashboard
-                </h2>
+        <!-- Heading -->
+        <div class="text-center mb-4">
+          <h2 class="fw-bold text-primary mb-1">🌤 Weather App</h2>
+          <small class="text-muted">Professional Weather Dashboard</small>
+        </div>
 
-                <!-- Search -->
-                <div class="input-group mb-4">
-                    <input
-                        type="text"
-                        id="cityName"
-                        class="form-control rounded-start-pill py-3"
-                        placeholder="Search city..."
-                    >
+        <!-- Search -->
+        <div class="input-group mb-4">
+          <input
+            type="text"
+            id="cityName"
+            class="form-control rounded-start-pill py-3"
+            placeholder="Enter city name..."
+          />
+          <button
+            class="btn btn-primary px-4 rounded-end-pill"
+            onclick="getWeather()"
+          >
+            Search
+          </button>
+        </div>
 
-                    <button
-                        class="btn btn-primary px-4 rounded-end-pill"
-                        onclick="getWeather()"
-                    >
-                        Search
-                    </button>
+        <!-- Main Weather -->
+        <div class="row align-items-center text-center mb-4">
+
+          <div class="col-md-5">
+            <div style="font-size:70px;">☁️</div>
+            <h1 class="display-3 fw-bold text-primary mb-0">
+              <span id="Tempearture">--</span>°C
+            </h1>
+            <h5 id="weatherType" class="text-secondary">
+              Clear Sky
+            </h5>
+          </div>
+
+          <div class="col-md-7">
+            <h3 id="cityText" class="fw-bold text-dark mb-2">
+              City, State, Country
+            </h3>
+
+            <div class="row g-3 text-center mt-2">
+
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Feels Like</small>
+                  <h5 id="feelsLike" class="mb-0">--°C</h5>
                 </div>
+              </div>
 
-                <!-- Weather Main -->
-                <div class="text-center mb-4">
-                    <div style="font-size:70px;">☁️</div>
-
-                    <h3 id="cityText" class="fw-bold text-dark">
-                        Your City
-                    </h3>
-
-                    <h1
-                        class="display-2 fw-bold text-primary"
-                    >
-                        <span id="Tempearture">--</span>°C
-                    </h1>
-
-                    <h5 id="weatherType" class="text-secondary">
-                        Clear Sky
-                    </h5>
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Humidity</small>
+                  <h5 id="humidity" class="mb-0">--%</h5>
                 </div>
+              </div>
 
-                <!-- Stats -->
-                <div class="row g-3 text-center">
-
-                    <div class="col-6">
-                        <div
-                            class="card shadow-sm border-0 rounded-4 p-3"
-                        >
-                            <h6 class="text-muted">Humidity</h6>
-                            <h4 id="humidity">--%</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div
-                            class="card shadow-sm border-0 rounded-4 p-3"
-                        >
-                            <h6 class="text-muted">Feels Like</h6>
-                            <h4 id="feelsLike">--°C</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div
-                            class="card shadow-sm border-0 rounded-4 p-3"
-                        >
-                            <h6 class="text-muted">Wind Speed</h6>
-                            <h4 id="windSpeed">--</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div
-                            class="card shadow-sm border-0 rounded-4 p-3"
-                        >
-                            <h6 class="text-muted">Pressure</h6>
-                            <h4 id="pressure">--</h4>
-                        </div>
-                    </div>
-
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Wind Speed</small>
+                  <h5 id="windSpeed" class="mb-0">--</h5>
                 </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Pressure</small>
+                  <h5 id="pressure" class="mb-0">--</h5>
+                </div>
+              </div>
+
+              <!-- Optional JS fields -->
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Min Temp</small>
+                  <h5 id="minTemp" class="mb-0">--°C</h5>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Max Temp</small>
+                  <h5 id="maxTemp" class="mb-0">--°C</h5>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Sunrise</small>
+                  <h6 id="sunrise" class="mb-0">--</h6>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card border-0 shadow-sm rounded-4 py-3">
+                  <small class="text-muted">Sunset</small>
+                  <h6 id="sunset" class="mb-0">--</h6>
+                </div>
+              </div>
 
             </div>
-
+          </div>
         </div>
+
+      </div>
+      <!-- End Card -->
+
     </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
