@@ -1,132 +1,229 @@
 const country1 = document.getElementById("country1");
 const country2 = document.getElementById("country2");
+
 const flag1 = document.getElementById("flag1");
 const flag2 = document.getElementById("flag2");
+
 const convertBtn = document.getElementById("convertBtn");
 const swapBtn = document.getElementById("swapBtn");
+
 const orgAmount = document.getElementById("orgAmount");
+
 const newAmount = document.getElementById("newAmount");
 const exchangeRate = document.getElementById("exchangeRate");
+
 const loading = document.getElementById("loading");
 const errorMessage = document.getElementById("errorMessage");
 
-// Load countries
+
+// Load Countries
 async function loadCountries() {
-  const response = await fetch("codes.json");
+
+  loading.innerText = "Loading Countries...";
+
+  const response = await fetch(
+    "https://restcountries.com/v3.1/all"
+  );
+
   const data = await response.json();
 
-  data.forEach((country) => {
-    const option1 = document.createElement("option");
-    option1.innerText = country.Country;
-    option1.value =
-      `${country.Currency_Code},${country.Country_Code}`;
 
-    const option2 = document.createElement("option");
-    option2.innerText = country.Country;
+  // Sort Countries
+  data.sort((a, b) =>
+    a.name.common.localeCompare(b.name.common)
+  );
+
+
+  data.forEach((country) => {
+
+    // Skip if currency missing
+    if (!country.currencies) return;
+
+
+    const currencyCode =
+      Object.keys(country.currencies)[0];
+
+    const countryCode =
+      country.cca2;
+
+    const countryName =
+      country.name.common;
+
+
+    // Option 1
+    const option1 =
+      document.createElement("option");
+
+    option1.innerText =
+      `${countryName} (${currencyCode})`;
+
+    option1.value =
+      `${currencyCode},${countryCode}`;
+
+
+    // Option 2
+    const option2 =
+      document.createElement("option");
+
+    option2.innerText =
+      `${countryName} (${currencyCode})`;
+
     option2.value =
-      `${country.Currency_Code},${country.Country_Code}`;
+      `${currencyCode},${countryCode}`;
+
 
     country1.appendChild(option1);
+
     country2.appendChild(option2);
+
   });
 
-  // Default countries
-  country1.value = "usd,US";
-  country2.value = "inr,IN";
+
+  // Default Countries
+  country1.value = "USD,US";
+
+  country2.value = "INR,IN";
+
 
   updateFlag(country1, flag1);
+
   updateFlag(country2, flag2);
+
+
+  loading.innerText = "";
+
 }
 
-// Update flag
+
+// Update Flag
 function updateFlag(dropdown, flagImage) {
-  const selectedValue = dropdown.value;
+
   const countryCode =
-    selectedValue.split(",")[1];
+    dropdown.value.split(",")[1];
 
   flagImage.src =
     `https://flagsapi.com/${countryCode}/flat/64.png`;
+
 }
 
-// Convert currency
+
+// Convert Currency
 async function convertCurrency() {
+
   errorMessage.innerText = "";
-  loading.innerText = "Loading...";
-  convertBtn.disabled = true;
 
-  const amount = orgAmount.value;
-  const fromValue = country1.value;
-  const toValue = country2.value;
+  loading.innerText = "Converting...";
 
-  if (!amount) {
+
+  const amount =
+    orgAmount.value;
+
+
+  if (!amount || amount <= 0) {
+
     errorMessage.innerText =
-      "Please enter amount";
+      "Please enter valid amount";
+
     loading.innerText = "";
-    convertBtn.disabled = false;
+
     return;
   }
 
-  if (amount <= 0) {
-    errorMessage.innerText =
-      "Amount must be greater than zero";
-    loading.innerText = "";
-    convertBtn.disabled = false;
-    return;
-  }
 
   const fromCurrency =
-    fromValue.split(",")[0];
+    country1.value
+      .split(",")[0]
+      .toLowerCase();
 
   const toCurrency =
-    toValue.split(",")[0];
+    country2.value
+      .split(",")[0]
+      .toLowerCase();
 
-  const API =
-    `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`;
 
-  const response = await fetch(API);
-  const data = await response.json();
+  try {
 
-  const rate =
-    data[fromCurrency][toCurrency];
+    const API =
+      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`;
 
-  const convertedValue =
-    amount * rate;
 
-  newAmount.innerText =
-    `${convertedValue.toFixed(2)} ${toCurrency.toUpperCase()}`;
+    const response =
+      await fetch(API);
 
-  exchangeRate.innerText =
-    `1 ${fromCurrency.toUpperCase()} = ${rate} ${toCurrency.toUpperCase()}`;
+    const data =
+      await response.json();
+
+
+    const rate =
+      data[fromCurrency][toCurrency];
+
+
+    const convertedValue =
+      amount * rate;
+
+
+    newAmount.innerText =
+      `${convertedValue.toFixed(2)} ${toCurrency.toUpperCase()}`;
+
+
+    exchangeRate.innerText =
+      `1 ${fromCurrency.toUpperCase()} = ${rate} ${toCurrency.toUpperCase()}`;
+
+
+  } catch (error) {
+
+    errorMessage.innerText =
+      "Something went wrong";
+
+  }
+
 
   loading.innerText = "";
-  convertBtn.disabled = false;
+
 }
 
-// Events
+
+// Country Change
 country1.addEventListener("change", () => {
+
   updateFlag(country1, flag1);
+
 });
+
 
 country2.addEventListener("change", () => {
+
   updateFlag(country2, flag2);
+
 });
 
+
+// Convert Button
 convertBtn.addEventListener(
   "click",
   convertCurrency
 );
 
-swapBtn.addEventListener("click", () => {
-  const tempValue = country1.value;
 
-  country1.value = country2.value;
-  country2.value = tempValue;
+// Swap Button
+swapBtn.addEventListener("click", () => {
+
+  const temp =
+    country1.value;
+
+  country1.value =
+    country2.value;
+
+  country2.value =
+    temp;
+
 
   updateFlag(country1, flag1);
+
   updateFlag(country2, flag2);
 
-  convertCurrency();
 });
 
-// Start app
+
+// Start App
 loadCountries();
