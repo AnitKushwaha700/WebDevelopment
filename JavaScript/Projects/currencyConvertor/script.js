@@ -21,74 +21,79 @@ async function loadCountries() {
 
   loading.innerText = "Loading Countries...";
 
-  const response = await fetch(
-    "https://restcountries.com/v3.1/all"
-  );
+  try {
 
-  const data = await response.json();
+    const response = await fetch(
+      "https://restcountries.com/v3.1/all?fields=name,currencies,cca2"
+    );
 
-
-  // Sort Countries
-  data.sort((a, b) =>
-    a.name.common.localeCompare(b.name.common)
-  );
+    const data = await response.json();
 
 
-  data.forEach((country) => {
-
-    // Skip if currency missing
-    if (!country.currencies) return;
-
-
-    const currencyCode =
-      Object.keys(country.currencies)[0];
-
-    const countryCode =
-      country.cca2;
-
-    const countryName =
-      country.name.common;
+    // Sort Countries
+    data.sort((a, b) =>
+      a.name.common.localeCompare(b.name.common)
+    );
 
 
-    // Option 1
-    const option1 =
-      document.createElement("option");
+    data.forEach((country) => {
 
-    option1.innerText =
-      `${countryName} (${currencyCode})`;
+      // Skip countries without currency
+      if (!country.currencies) return;
 
-    option1.value =
-      `${currencyCode},${countryCode}`;
+      const currencyCode =
+        Object.keys(country.currencies)[0];
 
+      const countryCode =
+        country.cca2;
 
-    // Option 2
-    const option2 =
-      document.createElement("option");
-
-    option2.innerText =
-      `${countryName} (${currencyCode})`;
-
-    option2.value =
-      `${currencyCode},${countryCode}`;
+      const countryName =
+        country.name.common;
 
 
-    country1.appendChild(option1);
+      // Create option for first dropdown
+      const option1 =
+        document.createElement("option");
 
-    country2.appendChild(option2);
+      option1.innerText =
+        `${countryName} (${currencyCode})`;
 
-  });
-
-
-  // Default Countries
-  country1.value = "USD,US";
-
-  country2.value = "INR,IN";
+      option1.value =
+        `${currencyCode},${countryCode}`;
 
 
-  updateFlag(country1, flag1);
+      // Create option for second dropdown
+      const option2 =
+        document.createElement("option");
 
-  updateFlag(country2, flag2);
+      option2.innerText =
+        `${countryName} (${currencyCode})`;
 
+      option2.value =
+        `${currencyCode},${countryCode}`;
+
+
+      country1.appendChild(option1);
+      country2.appendChild(option2);
+
+    });
+
+
+    // Default countries
+    country1.value = "USD,US";
+    country2.value = "INR,IN";
+
+
+    updateFlag(country1, flag1);
+    updateFlag(country2, flag2);
+
+
+  } catch (error) {
+
+    errorMessage.innerText =
+      "Failed to load countries";
+
+  }
 
   loading.innerText = "";
 
@@ -102,7 +107,7 @@ function updateFlag(dropdown, flagImage) {
     dropdown.value.split(",")[1];
 
   flagImage.src =
-    `https://flagsapi.com/${countryCode}/flat/64.png`;
+    `https://flagcdn.com/48x36/${countryCode.toLowerCase()}.png`;
 
 }
 
@@ -119,6 +124,7 @@ async function convertCurrency() {
     orgAmount.value;
 
 
+  // Validation
   if (!amount || amount <= 0) {
 
     errorMessage.innerText =
@@ -162,6 +168,7 @@ async function convertCurrency() {
       amount * rate;
 
 
+    // Show Result
     newAmount.innerText =
       `${convertedValue.toFixed(2)} ${toCurrency.toUpperCase()}`;
 
@@ -173,17 +180,16 @@ async function convertCurrency() {
   } catch (error) {
 
     errorMessage.innerText =
-      "Something went wrong";
+      "Currency conversion failed";
 
   }
-
 
   loading.innerText = "";
 
 }
 
 
-// Country Change
+// Country Change Events
 country1.addEventListener("change", () => {
 
   updateFlag(country1, flag1);
@@ -219,7 +225,6 @@ swapBtn.addEventListener("click", () => {
 
 
   updateFlag(country1, flag1);
-
   updateFlag(country2, flag2);
 
 });
