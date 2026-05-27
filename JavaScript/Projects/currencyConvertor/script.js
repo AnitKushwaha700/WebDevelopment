@@ -4,9 +4,6 @@ const country2 = document.getElementById("country2");
 const flag1 = document.getElementById("flag1");
 const flag2 = document.getElementById("flag2");
 
-const convertBtn = document.getElementById("convertBtn");
-const swapBtn = document.getElementById("swapBtn");
-
 const orgAmount = document.getElementById("orgAmount");
 
 const newAmount = document.getElementById("newAmount");
@@ -15,95 +12,85 @@ const exchangeRate = document.getElementById("exchangeRate");
 const loading = document.getElementById("loading");
 const errorMessage = document.getElementById("errorMessage");
 
+const convertBtn = document.getElementById("convertBtn");
+const swapBtn = document.getElementById("swapBtn");
+
 
 // Load Countries
 async function loadCountries() {
 
-  loading.innerText = "Loading Countries...";
-
-  try {
-
-    const response = await fetch(
-      "https://restcountries.com/v3.1/all?fields=name,currencies,cca2"
-    );
-
-    const data = await response.json();
+  loading.innerText = "Loading...";
 
 
-    // Sort Countries
-    data.sort((a, b) =>
-      a.name.common.localeCompare(b.name.common)
-    );
+  let response = await fetch(
+    "https://restcountries.com/v3.1/all?fields=name,currencies,cca2"
+  );
+
+  let data = await response.json();
 
 
-    data.forEach((country) => {
-
-      // Skip countries without currency
-      if (!country.currencies) return;
-
-      const currencyCode =
-        Object.keys(country.currencies)[0];
-
-      const countryCode =
-        country.cca2;
-
-      const countryName =
-        country.name.common;
+  data.sort((a, b) =>
+    a.name.common.localeCompare(b.name.common)
+  );
 
 
-      // Create option for first dropdown
-      const option1 =
-        document.createElement("option");
+  data.forEach((country) => {
 
-      option1.innerText =
-        `${countryName} (${currencyCode})`;
+    if (!country.currencies) return;
 
-      option1.value =
-        `${currencyCode},${countryCode}`;
+    let currencyCode =
+      Object.keys(country.currencies)[0];
 
+    let countryCode =
+      country.cca2;
 
-      // Create option for second dropdown
-      const option2 =
-        document.createElement("option");
-
-      option2.innerText =
-        `${countryName} (${currencyCode})`;
-
-      option2.value =
-        `${currencyCode},${countryCode}`;
+    let countryName =
+      country.name.common;
 
 
-      country1.appendChild(option1);
-      country2.appendChild(option2);
+    let option1 =
+      document.createElement("option");
 
-    });
+    option1.innerText =
+      `${countryName} (${currencyCode})`;
 
-
-    // Default countries
-    country1.value = "USD,US";
-    country2.value = "INR,IN";
-
-
-    updateFlag(country1, flag1);
-    updateFlag(country2, flag2);
+    option1.value =
+      `${currencyCode},${countryCode}`;
 
 
-  } catch (error) {
+    let option2 =
+      document.createElement("option");
 
-    errorMessage.innerText =
-      "Failed to load countries";
+    option2.innerText =
+      `${countryName} (${currencyCode})`;
 
-  }
+    option2.value =
+      `${currencyCode},${countryCode}`;
+
+
+    country1.appendChild(option1);
+    country2.appendChild(option2);
+
+  });
+
+
+  // Default Values
+  country1.value = "USD,US";
+  country2.value = "INR,IN";
+
+
+  updateFlag(country1, flag1);
+  updateFlag(country2, flag2);
 
   loading.innerText = "";
-
 }
+
 
 
 // Update Flag
 function updateFlag(dropdown, flagImage) {
 
-  const countryCode =
+  let countryCode =
     dropdown.value.split(",")[1];
 
   flagImage.src =
@@ -112,23 +99,22 @@ function updateFlag(dropdown, flagImage) {
 }
 
 
+
 // Convert Currency
 async function convertCurrency() {
 
   errorMessage.innerText = "";
-
   loading.innerText = "Converting...";
 
 
-  const amount =
+  let amount =
     orgAmount.value;
 
 
-  // Validation
-  if (!amount || amount <= 0) {
+  if (amount <= 0 || amount === "") {
 
     errorMessage.innerText =
-      "Please enter valid amount";
+      "Enter valid amount";
 
     loading.innerText = "";
 
@@ -136,60 +122,47 @@ async function convertCurrency() {
   }
 
 
-  const fromCurrency =
-    country1.value
-      .split(",")[0]
-      .toLowerCase();
+  let fromCurrency =
+    country1.value.split(",")[0].toLowerCase();
 
-  const toCurrency =
-    country2.value
-      .split(",")[0]
-      .toLowerCase();
+  let toCurrency =
+    country2.value.split(",")[0].toLowerCase();
 
 
-  try {
-
-    const API =
-      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`;
+  let API =
+    `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`;
 
 
-    const response =
-      await fetch(API);
+  let response =
+    await fetch(API);
 
-    const data =
-      await response.json();
-
-
-    const rate =
-      data[fromCurrency][toCurrency];
+  let data =
+    await response.json();
 
 
-    const convertedValue =
-      amount * rate;
+  let rate =
+    data[fromCurrency][toCurrency];
 
 
-    // Show Result
-    newAmount.innerText =
-      `${convertedValue.toFixed(2)} ${toCurrency.toUpperCase()}`;
+  let finalAmount =
+    amount * rate;
 
 
-    exchangeRate.innerText =
-      `1 ${fromCurrency.toUpperCase()} = ${rate} ${toCurrency.toUpperCase()}`;
+  newAmount.innerText =
+    `${finalAmount.toFixed(2)} ${toCurrency.toUpperCase()}`;
 
 
-  } catch (error) {
+  exchangeRate.innerText =
+    `1 ${fromCurrency.toUpperCase()} = ${rate} ${toCurrency.toUpperCase()}`;
 
-    errorMessage.innerText =
-      "Currency conversion failed";
-
-  }
 
   loading.innerText = "";
 
 }
 
 
-// Country Change Events
+
+// Change Flag
 country1.addEventListener("change", () => {
 
   updateFlag(country1, flag1);
@@ -204,6 +177,7 @@ country2.addEventListener("change", () => {
 });
 
 
+
 // Convert Button
 convertBtn.addEventListener(
   "click",
@@ -211,23 +185,22 @@ convertBtn.addEventListener(
 );
 
 
+
 // Swap Button
 swapBtn.addEventListener("click", () => {
 
-  const temp =
-    country1.value;
+  let temp = country1.value;
 
-  country1.value =
-    country2.value;
+  country1.value = country2.value;
 
-  country2.value =
-    temp;
+  country2.value = temp;
 
 
   updateFlag(country1, flag1);
   updateFlag(country2, flag2);
 
 });
+
 
 
 // Start App
