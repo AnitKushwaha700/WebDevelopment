@@ -1,24 +1,37 @@
-async function DoCalculation() {
+async function login() {
+
   try {
-    const API_URL = "https://v2.jokeapi.dev/joke/Programming,Miscellaneous";
 
-    const response = await fetch(API_URL);
+    const username = prompt("Enter Username");
 
-    const data = await response.json();
+    // Validation
+    if (username === "") {
+      throw new Error("Username Cannot Be Empty");
+    }
 
-    testingData(data);
+    // Fake Server Delay
+    await new Promise((resolve) => {
+      setTimeout(resolve, 2000);
+    });
+
+    // Username Check
+    if (username !== "aniket") {
+      throw new Error("Invalid Username");
+    }
+
+    // Success
+    console.log("Login Successful");
+
   } catch (e) {
-    alert(e.message);
+
+    console.log("Error :", e.message);
+
   } finally {
-    console.log("Process Complete");
+
+    console.log("Login Process Finished");
+
   }
+
 }
 
-function testingData(Data) {
-  //   try {
-  //     console.log(data);
-  //   } catch (e) {
-  //     throw e;
-  //   }
-  throw new Error("Something Happens");
-}
+login();
