@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mausam Ka Haal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div
+        class="min-vh-100 d-flex justify-content-center align-items-center"
+        style="
+            background-image:url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b');
+            background-size:cover;
+            background-position:center;
+        "
+    >
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-6 col-lg-5">
+
+                    <!-- Main Card -->
+                    <div class="card bg-dark bg-opacity-75 text-white shadow-lg border-0">
+
+                        <div class="card-body p-4">
+
+                            <h1 class="text-center mb-2">
+                                🌦️ Mausam Ka Haal
+                            </h1>
+
+                            <p class="text-center text-light mb-4">
+                                Check current weather of any city
+                            </p>
+
+                            <!-- Search Area -->
+                            <div class="input-group mb-3">
+
+                                <input
+                                    type="text"
+                                    id="cityName"
+                                    class="form-control"
+                                    placeholder="Enter City Name"
+                                >
+
+                                <button
+                                    class="btn btn-warning"
+                                    id="searchBtn"
+                                >
+                                    Search
+                                </button>
+
+                            </div>
+
+                            <!-- Error Message -->
+                            <div
+                                id="errorMessage"
+                                class="alert alert-danger d-none"
+                            >
+                                Invalid City Name
+                            </div>
+
+                            <!-- Weather Result -->
+                            <div
+                                id="weatherCard"
+                                class="d-none text-center"
+                            >
+
+                                <h2 id="cityOutput" class="mb-3">
+                                    City Name
+                                </h2>
+
+                                <img
+                                    id="weatherIcon"
+                                    src=""
+                                    alt="Weather Icon"
+                                    width="120"
+                                >
+
+                                <h1 class="display-4 fw-bold">
+                                    <span id="temperature">0</span>°C
+                                </h1>
+
+                                <h5
+                                    id="description"
+                                    class="text-capitalize mb-4"
+                                >
+                                    Clear Sky
+                                </h5>
+
+                                <div class="row text-center">
+
+                                    <div class="col-6">
+                                        <div class="card bg-secondary text-white">
+                                            <div class="card-body">
+                                                <h6>Humidity</h6>
+                                                <h4 id="humidity">0%</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="card bg-primary text-white">
+                                            <div class="card-body">
+                                                <h6>Temperature</h6>
+                                                <h4>
+                                                    <span id="temperature2">0</span>°C
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- End Weather Card -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
