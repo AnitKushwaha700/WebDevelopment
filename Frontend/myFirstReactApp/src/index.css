@@ -1,4 +1,10 @@
-#abcd{
+.main{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(246, 221, 176);
+}
+
+#heading{
   background-color: red;
   color: white;
   text-align: center;
