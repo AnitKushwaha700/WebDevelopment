@@ -1,7 +1,9 @@
 function About() {
   return (
     <>
-      <div>About</div>
+      <div className="container d-flex justify-content-center ">
+        <span className="fs-2 text-primary">About</span>
+      </div>
     </>
   );
 }

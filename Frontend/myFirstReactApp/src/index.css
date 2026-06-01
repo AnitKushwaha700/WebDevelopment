@@ -1,13 +1,11 @@
-.main{
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(246, 221, 176);
+a{
+  text-decoration: none !important;
 }
 
-#heading{
-  background-color: red;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: larger;
+a:hover{
+  text-decoration: underline !important;
+}
+
+.container{
+  padding: 200px;
 }

@@ -1,7 +1,9 @@
 function Login() {
   return (
     <>
-      <div>Login</div>
+      <div className="container d-flex justify-content-center ">
+        <span className="fs-2 text-primary">Login</span>
+      </div>
     </>
   );
 }

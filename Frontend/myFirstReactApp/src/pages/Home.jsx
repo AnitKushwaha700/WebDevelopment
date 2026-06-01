@@ -1,7 +1,9 @@
 function Home() {
   return (
     <>
-      <div>Home</div>
+      <div className="container d-flex justify-content-center ">
+        <span className="fs-2 text-primary">Home</span>
+      </div>
     </>
   );
 }
