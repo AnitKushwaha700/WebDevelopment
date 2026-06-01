@@ -7,19 +7,6 @@ const App = () => {
     <>
       <Header />
 
-      <div className="main">
-        <h1 id="heading" className="bg-primary">My First React App</h1>
-
-        <div id="card">
-          <h1>Login</h1>
-
-          <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" />
-          </div>
-        </div>
-      </div>
-
       <Footer />
     </>
   );
