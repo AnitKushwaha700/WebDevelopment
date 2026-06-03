@@ -12,6 +12,12 @@ function App() {
 
       <img src={contactPage} alt="" className="w-100" />
 
+      <div className="d-flex justify-content-center mt-3">
+        <button className="btn btn-primary d-flex gap-2 align-items-center">
+          <IoIosSave className="fs-5 text-danger" />
+          <span>Save Data</span>
+        </button>
+      </div>
     </>
   );
 }
