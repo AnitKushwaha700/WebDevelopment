@@ -33,7 +33,9 @@ function App() {
           Increase
         </button>
 
-
+        <button className="btn btn-danger" onClick={() => setCount(count - 1)}>
+          Decrease
+        </button>
       </div>
     </>
   );
