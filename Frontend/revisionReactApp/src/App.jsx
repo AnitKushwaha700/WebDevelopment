@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FaWifi } from "react-icons/fa";
 import { IoIosSave } from "react-icons/io";
 
+import LoginPage from "./assets/pages/login";
+
 import contactPage from "./assets/contactPage.png";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <FaWifi /> <span>My Revision App</span>
       </div>
 
+      <LoginPage/>
+
       <img src={contactPage} alt="" className="w-100" />
 
       <div className="d-flex justify-content-center mt-3">
@@ -22,8 +26,11 @@ function App() {
         </button>
       </div>
 
+
+    
+
       {/* Counter Section */}
-      <div className="text-center mt-4">
+      {/* <div className="text-center mt-4">
         <h3>Counter: {count}</h3>
 
         <button
@@ -36,7 +43,7 @@ function App() {
         <button className="btn btn-danger" onClick={() => setCount(count - 1)}>
           Decrease
         </button>
-      </div>
+      </div> */}
     </>
   );
 }
