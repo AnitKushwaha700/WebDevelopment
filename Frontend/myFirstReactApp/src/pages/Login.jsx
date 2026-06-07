@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [userName, setUserName] = useState("");
@@ -10,7 +11,6 @@ function Login() {
     console.log("userName :", userName);
     console.log("password :", password);
   };
-  
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -36,12 +36,16 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <br />
-            <div className="float-end">
+            <div className="text-end">
               <button type="submit" className="btn btn-primary">
                 Login
               </button>
             </div>
           </form>
+          <hr />
+          <p>
+            Don't have an account? <Link to="/register">Register here</Link>
+          </p>
         </div>
       </div>
     </>
