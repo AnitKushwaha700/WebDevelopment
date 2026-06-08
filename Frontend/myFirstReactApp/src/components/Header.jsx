@@ -12,6 +12,7 @@ function Header() {
           <Link to={"/about"}>About</Link>
           <Link to={"/product"}>Product</Link>
           <Link to={"/contactUs"}>Contact Us</Link>
+          <Link to={"/Information"}>Information</Link>
         </div>
 
         <div className="d-flex gap-3">
