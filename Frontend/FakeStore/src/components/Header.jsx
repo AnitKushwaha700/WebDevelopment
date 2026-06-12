@@ -5,29 +5,25 @@ import { FaStore } from "react-icons/fa";
 const Header = () => {
   return (
     <>
-      <div className="bg-blue-500 flex justify-between items-center p-3">
-        <FaStore className="text-2xl text-white" />
-        <div className="text-white flex gap-5">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/order">Orders</Link>
-          <Link to="/product">Product</Link>
-          <Link to="/contact">Contact</Link>
+      <div className="bg-blue-500 flex justify-between p-3">
+        <div className="flex gap-3 items-center">
+          <FaStore className="text-2xl text-white" />
+         <span className="text-white text-xl">
+           Fake Store
+         </span>
         </div>
         <div className="flex gap-4">
-          <Link
-            to="/login"
-            className="border text-white px-2 py-1  rounded hover:bg-blue-700"
-          >
-            Login
+          <Link to={"/"} className="text-white hover:underline">
+            Home
           </Link>
-
-          <Link
-            to="/register"
-            className="border text-white px-2 py-1 rounded hover:bg-blue-700"
-          >
-            Register
+          <Link to={"/about"} className="text-white hover:underline">
+            About
+          </Link>
+          <Link to={"/product"} className="text-white hover:underline">
+            Product
+          </Link>
+          <Link to={"/contact-us"} className="text-white hover:underline">
+            Contact
           </Link>
         </div>
       </div>
