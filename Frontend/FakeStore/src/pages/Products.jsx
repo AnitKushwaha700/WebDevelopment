@@ -47,7 +47,11 @@ const Products = () => {
                 </div>
                 <div className="flex flex-col justify-between h-50">
                   <div>
-                    <p className="text-xl">{product.title}</p>
+                    <p className="text-xl" title={product.title}>
+                      {product.title.length > 50
+                        ? product.title.slice(0, 47) + "..."
+                        : product.title}
+                    </p>
                     <p className="text-sm capitalize text-gray-500">
                       {product.category}
                     </p>
