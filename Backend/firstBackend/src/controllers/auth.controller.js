@@ -15,7 +15,9 @@ export const RegisterUser = async (req, res) => {
     }
 
 
-  } catch (error) {}
+  } catch (error) {
+    ({message:"This is a catch Error"})
+  }
 };
 
 export const LoginUser = (req, res) => {
