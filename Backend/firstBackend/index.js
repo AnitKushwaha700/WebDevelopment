@@ -19,7 +19,6 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to my first backend project" });
 });
 
-
 // Default Error Handler
 app.use((err, req, res, next) => {
   const ErrMessage = err.message || "Internal Server Error";
@@ -27,7 +26,6 @@ app.use((err, req, res, next) => {
 
   res.status(ErrStatusCode).json({ message: ErrMessage });
 });
-
 
 const port = process.env.PORT || 5000;
 
